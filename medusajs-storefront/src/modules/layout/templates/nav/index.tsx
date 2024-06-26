@@ -23,8 +23,13 @@ export default async function Nav() {
 
             
             
-           <img src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1719384891/rrrrrrrrrrrrrrrrrrrrrrrr_uzl74w.png" alt="sea sky">
-           </img>
+          <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              data-testid="nav-store-link"
+            >
+               S E A S K Y 
+            </LocalizedClientLink>
 
 
 
