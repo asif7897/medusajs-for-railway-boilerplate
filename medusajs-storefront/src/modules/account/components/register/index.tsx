@@ -22,7 +22,7 @@ const Register = ({ setCurrentView }: Props) => {
         Become a Medusa Store Member
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        Create your Medusa Store Member profile, and get access to an enhanced
+        Create your  SEA SKY Member profile, and get access to an enhanced
         shopping experience.
       </p>
       <form className="w-full flex flex-col" action={formAction}>
