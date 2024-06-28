@@ -1,8 +1,16 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Ovo&family=Questrial&display=swap');
+
+*,
+html,
+body {
+  font-family: "Ovo", serif;
+}
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -13,16 +21,18 @@
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
-  input:focus ~ label,
-  input:not(:placeholder-shown) ~ label {
+  input:focus~label,
+  input:not(:placeholder-shown)~label {
     @apply -translate-y-2 text-xsmall-regular;
   }
 
-  input:focus ~ label {
+  input:focus~label {
     @apply left-0;
   }
 
@@ -108,5 +118,80 @@
 
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
+  }
+}
+
+
+.main-hero-section {
+  background-color: #e1d0c8;
+  background-image: linear-gradient(to right bottom, #e1d0c808, #ead9d17a), url('../../public/assets/Hero.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-position: top center; */
+}
+
+.nav-gradient {
+  background-image: linear-gradient(to bottom, #00000054, transparent);
+}
+
+.dropdown-container .dropdown {
+  opacity: 0;
+  visibility: none;
+  pointer-events: none;
+}
+
+.dropdown-container:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.category-card-1 {
+  background: url('../../public/assets/C-card-2.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-card-2 {
+  background: url('../../public/assets/C-card-1.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.product-1 {
+  background-image: url(../../public/assets/product-1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-2 {
+  background-image: url(../../public/assets/product-2.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-3 {
+  background-image: url(../../public/assets/product-3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-4 {
+  background-image: url(../../public/assets/product-4.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-5 {
+  background-image: url(../../public/assets/product-5.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width:1000px) {
+  .main-hero-section {
+    background-size: cover;
   }
 }
