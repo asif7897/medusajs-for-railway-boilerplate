@@ -7,7 +7,7 @@ const Hero = () => {
     >
       <div className="absolute left-12 md:left-52 inset-y-0 z-10 flex flex-col justify-center items-start text-left small:p-32 gap-6">
         <h2 className="text-4xl">
-          Linen elegance
+           S E A  S K Y 
         </h2>
         <a
           target="_blank"
