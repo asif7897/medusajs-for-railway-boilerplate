@@ -1,24 +1,56 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+// components/Hero.tsx
+'use client';
 
-const Hero = () => {
+import React from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
+
+const Hero: React.FC = () => {
+  const onChange = (index: number) => {
+    console.log(`Slide changed to: ${index}`);
+  };
+
+  const onClickItem = (index: number) => {
+    console.log(`Item clicked: ${index}`);
+  };
+
+  const onClickThumb = (index: number) => {
+    console.log(`Thumbnail clicked: ${index}`);
+  };
+
   return (
-    <div className="relative top-0 h-[90dvh] w-full border-b border-ui-border-base bg-ui-bg-subtle main-hero-section"
+    <Carousel 
+      showArrows={true} 
+      onChange={onChange} 
+      onClickItem={onClickItem} 
+      onClickThumb={onClickThumb}
     >
-      <div className="absolute left-12 md:left-52 inset-y-0 z-10 flex flex-col justify-center items-start text-left small:p-32 gap-6">
-        <h2 className="text-4xl">
-           S E A  S K Y 
-        </h2>
-        <a
-          target="_blank"
-        >
-          <Button variant="primary">
-            SHOP NOW
-          </Button>
-        </a>
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+1" alt="Slide 1" />
+        <p className="legend">Legend 1</p>
       </div>
-    </div>
-  )
-}
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+2" alt="Slide 2" />
+        <p className="legend">Legend 2</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+3" alt="Slide 3" />
+        <p className="legend">Legend 3</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+4" alt="Slide 4" />
+        <p className="legend">Legend 4</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+5" alt="Slide 5" />
+        <p className="legend">Legend 5</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/800x400.png?text=Slide+6" alt="Slide 6" />
+        <p className="legend">Legend 6</p>
+      </div>
+    </Carousel>
+  );
+};
 
-export default Hero
+export default Hero;
