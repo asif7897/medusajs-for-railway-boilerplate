@@ -21,7 +21,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, children, showMenu, image })
         const rect: any = button?.getBoundingClientRect();
         setLeft(rect.left)
       }}
-    // onMouseLeave={() => setIsOpen(false)}
+    onMouseLeave={() => setIsOpen(false)}
     >
       <a href="#" className={`${styles.Main_btn}  text-[#fff] uppercase`}>
         <div className='poppins font-[14px]'>
