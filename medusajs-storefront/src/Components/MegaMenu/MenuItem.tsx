@@ -37,7 +37,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, children, showMenu, image })
         <FadeDown startAnimation>
           <div className={`${styles.container_menu} bg-[#fff] w-full flex justify-center items-start gap-[40px]`}>
             {children}
-            <div className='flex gap-[40px]'>
+            <div className={styles.image_box}>
               {image.length > 0 ? image.map((item: any, index: number) => {
 
                 return (
