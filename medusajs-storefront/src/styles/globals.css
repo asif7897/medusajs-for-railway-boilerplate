@@ -173,22 +173,29 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .product-3 {
   background-image: url(../../public/assets/product-3.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .product-4 {
   background-image: url(../../public/assets/product-4.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .product-5 {
   background-image: url(../../public/assets/product-5.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.poppins {
+  font-family: "Poppins", sans-serif;
+
+}
 
 @media (max-width:1000px) {
   .main-hero-section {
