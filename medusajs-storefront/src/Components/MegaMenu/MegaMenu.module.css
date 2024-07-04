@@ -16,8 +16,7 @@
 }
 
 
-.menuItem>a:hover {
-}
+.menuItem>a:hover {}
 
 /* Mega menu styles */
 .megaMenu {
@@ -28,8 +27,12 @@
   display: flex;
   box-shadow: none;
   z-index: 1000;
-  width: calc(100vw - 20px );
+  width: calc(100vw - 20px);
   padding-top: 10px;
+}
+
+.megaMenuInside {
+  background-color: #fff;
 }
 
 .megaMenuContent {
@@ -68,10 +71,14 @@
   padding: 5px 10px;
   text-decoration: none;
   letter-spacing: 1px;
+  color: #fff;
+
 }
-.Main_btn div{
+
+.Main_btn div {
   position: relative;
 }
+
 .Main_btn div::before {
   content: "";
   position: absolute;
@@ -79,7 +86,8 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #ffffff; /* Change this to your desired color */
+  background-color: #ffffff;
+  /* Change this to your desired color */
   transition: width 0.3s ease-in-out;
 }
 
@@ -92,6 +100,7 @@
   color: #fff;
 }
 
-.container_menu{
+.container_menu {
   padding: 20px 50px;
+  background-color: #fff;
 }
