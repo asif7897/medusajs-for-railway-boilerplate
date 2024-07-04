@@ -3,6 +3,7 @@
 import React from 'react';
 import MenuItem from './MenuItem';
 import styles from './MegaMenu.module.css';
+import { StaticImageData } from 'next/image';
 
 interface SubCategory {
     name: string;
@@ -12,7 +13,7 @@ interface SubCategory {
 interface Category {
     main_category: string;
     sub_categories: SubCategory[];
-    image: string[]
+    image: StaticImageData[]
 }
 
 interface Props {
@@ -28,9 +29,9 @@ const MegaMenu: React.FC<Props> = ({ Arr }) => {
                 {Arr.map((menu, index) => (
                     <MenuItem key={index} title={menu.main_category} showMenu={menu.sub_categories.length > 0} image={menu.image} >
                         <div className={`${styles.megaMenuContent} flex flex-col poppins`}>
+                            <h3 className='poppins text-[15px] font-[600] font-[#000] mb-[10px]'>{menu.main_category}</h3>
                             {menu.sub_categories && menu.sub_categories.map((subMenu, subIndex) => (
                                 <div key={subIndex} className={styles.column}>
-                                    {/* <h3 className='poppins'>{subMenu.name}</h3> */}
                                     <ul>
                                         <li><a href={`#${subMenu.handle}`} className='poppins font-[400]'>{subMenu.name}</a></li>
                                     </ul>

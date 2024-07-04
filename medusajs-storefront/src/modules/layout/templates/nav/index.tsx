@@ -6,7 +6,12 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import MegaMenu from "Components/MegaMenu/MegaMenu"
-// import {}from '../../../../../public/assets/st1366.png'
+import st1366 from '../../../../../public/assets/st1366.png'
+import nf2535 from '../../../../../public/assets/nf2535.png'
+import women1 from '../../../../../public/assets/women-1.jpg'
+import women2 from '../../../../../public/assets/women-2.jpg'
+import acce1 from '../../../../../public/assets/acces-1.jpg'
+import acce2 from '../../../../../public/assets/acces-2.jpg'
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -22,7 +27,7 @@ export default async function Nav() {
         { "name": "Formal Shirt", "handle": "formal-shirt" },
         { "name": "Pant", "handle": "pant" }
       ],
-      image: ["../../../../../public/assets/st1366.png", "/assets/nf2535.png"]
+      image: [nf2535, st1366]
     },
     {
       "main_category": "Women",
@@ -31,7 +36,7 @@ export default async function Nav() {
         { "name": "Single Blazer", "handle": "single-blazer" },
         { "name": "Suit", "handle": "suit" }
       ],
-      image: []
+      image: [women1, women2]
     },
     {
       "main_category": "Accessory",
@@ -40,7 +45,7 @@ export default async function Nav() {
         { "name": "Belt", "handle": "belt" },
         { "name": "Tie-pin", "handle": "tie-pin" }
       ],
-      image: []
+      image: [acce1, acce2]
     }
   ]
 
