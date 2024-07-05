@@ -90,9 +90,9 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                 leaveFrom="opacity-100 backdrop-blur-2xl"
                 leaveTo="opacity-0"
               >
-                <Popover.Panel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl "
+                <Popover.Panel className="flex flex-col absolute w-full  sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl pr-0"
                   style={{
-                    minWidth: "fit-content",
+                    // minWidth: "fit-content",
                     width: "100%",
                     maxWidth: "350px"
                   }}
@@ -100,7 +100,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
 
                   {showCategory ? <>
                     <div className={mainBox} style={{
-                      minWidth: "fit-content",
+                      // minWidth: "fit-content",
                       width: "100%",
                       maxWidth: "350px"
                     }}>
@@ -134,7 +134,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                     </div>
                   </> :
                     <div style={{
-                      minWidth: "fit-content",
+                      // minWidth: "fit-content",
                       width: "100%",
                       maxWidth: "350px"
                     }} className="h-full">

@@ -111,7 +111,7 @@ export default async function Nav() {
               </div>
             </div>
 
-            <div className="flex justify-center items-center bg-[#000] pt-[10px] pb-[10px] poppins">
+            <div className="sm:flex hidden justify-center items-center bg-[#000] pt-[10px] pb-[10px] poppins ">
               <MegaMenu Arr={Arr} />
               {/* <img src=""/> */}
             </div>
