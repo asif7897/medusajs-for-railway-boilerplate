@@ -1,0 +1,38 @@
+.slideIn {
+    opacity: 0;
+    transform: translateX(100%);
+    animation-fill-mode: forwards;
+  }
+  
+  .slideInActive {
+    opacity: 1;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  .slideOutActive {
+    opacity: 0;
+    animation: slideOut 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+  

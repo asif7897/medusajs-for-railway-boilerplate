@@ -4,6 +4,7 @@ import React from 'react';
 import MenuItem from './MenuItem';
 import styles from './MegaMenu.module.css';
 import { StaticImageData } from 'next/image';
+import LocalizedClientLink from '@modules/common/components/localized-client-link';
 
 interface SubCategory {
     name: string;
@@ -13,7 +14,7 @@ interface SubCategory {
 interface Category {
     main_category: string;
     sub_categories: SubCategory[];
-    image: StaticImageData[]
+    image: StaticImageData[] | string[] | any
 }
 
 interface Props {
@@ -33,7 +34,9 @@ const MegaMenu: React.FC<Props> = ({ Arr }) => {
                             {menu.sub_categories && menu.sub_categories.map((subMenu, subIndex) => (
                                 <div key={subIndex} className={styles.column}>
                                     <ul>
-                                        <li><a href={`#${subMenu.handle}`} className='poppins font-[400]'>{subMenu.name}</a></li>
+                                        <li><LocalizedClientLink
+                                            href={`/collections/${subMenu.handle}`}
+                                            className='poppins font-[400]'>{subMenu.name}</LocalizedClientLink></li>
                                     </ul>
                                 </div>
                             ))}

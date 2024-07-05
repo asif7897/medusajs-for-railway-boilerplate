@@ -6,6 +6,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
+import Carousel from "Components/Carousel/Carousel"
 
 export const metadata: Metadata = {
   title: "Sea Sky",
@@ -65,10 +66,23 @@ export default async function Home({
   if (!collections || !region) {
     return null
   }
-
+  const images: string[] = [
+    'https://www.yellowclothing.net/cdn/shop/files/slider-ethnic.jpg?v=1715843122&width=2000',
+    'https://www.yellowclothing.net/cdn/shop/files/slider-main.jpg?v=1715840962&width=2000',
+    'https://www.yellowclothing.net/cdn/shop/files/Web-2_2c337e09-a006-463a-b823-d1a608f9e8b8.jpg?v=1716195778&width=2000',
+  ];
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
-      <Hero />
+
+      <Carousel images={images} auto interval={5000} />
+      {/* <Hero /> */}
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
@@ -76,7 +90,7 @@ export default async function Home({
       </div>
 
 
-          <section className="pb-7 pt-10 space-y-1">
+      <section className="pb-7 pt-10 space-y-1">
         <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold">
           Hot Products
         </h2>
@@ -88,7 +102,7 @@ export default async function Home({
 
 
 
-      
+
     </>
   )
 }

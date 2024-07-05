@@ -41,12 +41,14 @@ const nextConfig = withStoreConfig({
         protocol: 'https',
         hostname: 'medusa-server-testing.s3.us-east-1.amazonaws.com',
       },
-       {
-        protocol: "https",
-        hostname: "user-images.githubusercontent.com",
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
       },
-
-      
+      {
+        protocol: 'https',
+        hostname: 'medusajs-frontend-production-28be.up.railway.app',
+      },
     ],
   },
 })

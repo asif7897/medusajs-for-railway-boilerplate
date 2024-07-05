@@ -6,12 +6,6 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import MegaMenu from "Components/MegaMenu/MegaMenu"
-import st1366 from '../../../../../public/assets/st1366.png'
-import nf2535 from '../../../../../public/assets/nf2535.png'
-import women1 from '../../../../../public/assets/women-1.jpg'
-import women2 from '../../../../../public/assets/women-2.jpg'
-import acce1 from '../../../../../public/assets/acces-1.jpg'
-import acce2 from '../../../../../public/assets/acces-2.jpg'
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -20,32 +14,32 @@ export default async function Nav() {
       "main_category": "Men",
       "sub_categories": [
         { "name": "Blazer", "handle": "blazer" },
-        { "name": "Single Blazer", "handle": "single-blazer" },
+        { "name": "Single Blazer", "handle": "s_blazer" },
         { "name": "Tiebox", "handle": "tiebox" },
         { "name": "Suit", "handle": "suit" },
         { "name": "Punjabi", "handle": "punjabi" },
-        { "name": "Formal Shirt", "handle": "formal-shirt" },
+        { "name": "Formal Shirt", "handle": "shirt" },
         { "name": "Pant", "handle": "pant" }
       ],
-      image: [nf2535, st1366]
+      image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnf2535.9d8b5746.png&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fst1366.ea9d30dc.png&w=384&q=75"]
     },
     {
       "main_category": "Women",
       "sub_categories": [
-        { "name": "Blazer", "handle": "blazer" },
-        { "name": "Single Blazer", "handle": "single-blazer" },
-        { "name": "Suit", "handle": "suit" }
+        { "name": "Blazer", "handle": "blazer_w" },
+        { "name": "Single Blazer", "handle": "s_blazer_w" },
+        { "name": "Suit", "handle": "suit_w" }
       ],
-      image: [women1, women2]
+      image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-1.dc76cb6f.jpg&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-2.031fff47.jpg&w=384&q=75"]
     },
     {
       "main_category": "Accessory",
       "sub_categories": [
         { "name": "Tiebox", "handle": "tiebox" },
         { "name": "Belt", "handle": "belt" },
-        { "name": "Tie-pin", "handle": "tie-pin" }
+        { "name": "Tie-pin", "handle": "tie_pin" }
       ],
-      image: [acce1, acce2]
+      image: ['https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-1.69702ddf.jpg&w=384&q=75', "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-2.f358fb03.jpg&w=384&q=75"]
     }
   ]
 
@@ -78,7 +72,7 @@ export default async function Nav() {
                     <div className="hidden small:flex items-center gap-x-6 h-full">
                       {process.env.FEATURE_SEARCH_ENABLED && (
                         <LocalizedClientLink
-                          className="hover:text-ui-fg-base"
+                          className="hover:text-ui-fg-base "
                           href="/search"
                           scroll={false}
                         >
@@ -86,7 +80,7 @@ export default async function Nav() {
                         </LocalizedClientLink>
                       )}
                       <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
+                        className="hover:text-ui-fg-base poppins"
                         href="/account"
                       >
                         Account
@@ -95,7 +89,7 @@ export default async function Nav() {
                     <Suspense
                       fallback={
                         <LocalizedClientLink
-                          className="hover:text-ui-fg-base flex gap-2"
+                          className=" hover:text-ui-fg-base poppins flex gap-2 "
                           href="/cart"
                         >
                           Cart (0)
