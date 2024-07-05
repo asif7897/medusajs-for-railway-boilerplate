@@ -176,6 +176,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                                 </li>
                               )
                             }
+                            
                           })}
                         </ul>
                         <div className="flex flex-col gap-y-6">
