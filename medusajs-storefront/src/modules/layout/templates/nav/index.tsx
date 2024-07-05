@@ -6,6 +6,12 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import MegaMenu from "Components/MegaMenu/MegaMenu"
+import st1366 from '../../../../../public/assets/st1366.png'
+import nf2535 from '../../../../../public/assets/nf2535.png'
+import women1 from '../../../../../public/assets/women-1.jpg'
+import women2 from '../../../../../public/assets/women-2.jpg'
+import acce1 from '../../../../../public/assets/acces-1.jpg'
+import acce2 from '../../../../../public/assets/acces-2.jpg'
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -21,7 +27,8 @@ export default async function Nav() {
         { "name": "Formal Shirt", "handle": "shirt" },
         { "name": "Pant", "handle": "pant" }
       ],
-      image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnf2535.9d8b5746.png&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fst1366.ea9d30dc.png&w=384&q=75"]
+      image: [st1366, nf2535]
+      // image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnf2535.9d8b5746.png&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fst1366.ea9d30dc.png&w=384&q=75"]
     },
     {
       "main_category": "Women",
@@ -30,7 +37,7 @@ export default async function Nav() {
         { "name": "Single Blazer", "handle": "s_blazer_w" },
         { "name": "Suit", "handle": "suit_w" }
       ],
-      image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-1.dc76cb6f.jpg&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-2.031fff47.jpg&w=384&q=75"]
+      image: [women1, women2]
     },
     {
       "main_category": "Accessory",
@@ -39,7 +46,7 @@ export default async function Nav() {
         { "name": "Belt", "handle": "belt" },
         { "name": "Tie-pin", "handle": "tie_pin" }
       ],
-      image: ['https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-1.69702ddf.jpg&w=384&q=75', "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-2.f358fb03.jpg&w=384&q=75"]
+      image: [acce1, acce2]
     }
   ]
 
