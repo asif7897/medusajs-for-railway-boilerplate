@@ -116,7 +116,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         </div>
                         <div className="flex flex-col">
                           {Arr.map((menu, index) => (
-                            <div className={` flex flex-col poppins mt-[15px]`}>
+                            <div key={index} className={` flex flex-col poppins mt-[15px]`}>
                               <h3 className='poppins text-[15px] font-[600] font-[#000] mb-[10px]'>{menu.main_category}</h3>
                               {menu.sub_categories && menu.sub_categories.map((subMenu, subIndex) => (
                                 <div key={subIndex} className={''}>
@@ -176,7 +176,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                                 </li>
                               )
                             }
-                            
+
                           })}
                         </ul>
                         <div className="flex flex-col gap-y-6">
