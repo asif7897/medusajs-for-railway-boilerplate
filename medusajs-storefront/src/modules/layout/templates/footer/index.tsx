@@ -1,40 +1,36 @@
-import { Text, clx } from "@medusajs/ui";
-import { getCategoriesList, getCollectionsList } from "@lib/data";
-import LocalizedClientLink from "@modules/common/components/localized-client-link";
-import MedusaCTA from "@modules/layout/components/medusa-cta";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Text, clx } from "@medusajs/ui"
+
+import { getCategoriesList, getCollectionsList } from "@lib/data"
+
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import MedusaCTA from "@modules/layout/components/medusa-cta"
 
 export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6);
-  const { product_categories } = await getCategoriesList(0, 6);
+  const { collections } = await getCollectionsList(0, 6)
+  const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-white w-full bg-black text-white">
+    <footer className="border-t border-ui-border-base w-full">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-white hover:text-gray-400 uppercase"
+              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              S E A S K Y
+              S E A S K Y 
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus text-white">
+                <span className="txt-small-plus txt-ui-fg-base">
                   Categories
                 </span>
-                 
-                <hr className="border-white my-1" /> {/* White line below Categories */}
-
-
                 <ul className="grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
                     if (c.parent_category) {
-                      return null;
+                      return
                     }
 
                     const children =
@@ -42,16 +38,16 @@ export default async function Footer() {
                         name: child.name,
                         handle: child.handle,
                         id: child.id,
-                      })) || null;
+                      })) || null
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-white txt-small"
+                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
                         key={c.id}
                       >
                         <LocalizedClientLink
                           className={clx(
-                            "hover:text-gray-400",
+                            "hover:text-ui-fg-base",
                             children && "txt-small-plus"
                           )}
                           href={`/categories/${c.handle}`}
@@ -60,36 +56,33 @@ export default async function Footer() {
                         </LocalizedClientLink>
                         {children && (
                           <ul className="grid grid-cols-1 ml-3 gap-2">
-                            {children.map((child) => (
-                              <li key={child.id}>
-                                <LocalizedClientLink
-                                  className="hover:text-gray-400"
-                                  href={`/categories/${child.handle}`}
-                                >
-                                  {child.name}
-                                </LocalizedClientLink>
-                              </li>
-                            ))}
+                            {children &&
+                              children.map((child) => (
+                                <li key={child.id}>
+                                  <LocalizedClientLink
+                                    className="hover:text-ui-fg-base"
+                                    href={`/categories/${child.handle}`}
+                                  >
+                                    {child.name}
+                                  </LocalizedClientLink>
+                                </li>
+                              ))}
                           </ul>
                         )}
                       </li>
-                    );
+                    )
                   })}
                 </ul>
-               
               </div>
             )}
-            
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus text-white">
+                <span className="txt-small-plus txt-ui-fg-base">
                   Collections
                 </span>
-                <hr className="border-white my-2" /> {/* White line below Collections */}
-
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-white txt-small",
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -98,7 +91,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="hover:text-gray-400"
+                        className="hover:text-ui-fg-base"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -106,23 +99,19 @@ export default async function Footer() {
                     </li>
                   ))}
                 </ul>
-              
               </div>
             )}
-            
             <div className="flex flex-col gap-y-2">
-        
-              <span className="txt-small-plus text-white">Sea Sky</span>
-              <hr className="border-white my-2" /> {/* White line below Sea Sky */}
-              <ul className="grid grid-cols-1 gap-y-2 text-white txt-small">
+              <span className="txt-small-plus txt-ui-fg-base">Sea Sky</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
                     href="https://www.facebook.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-gray-400 flex items-center gap-2 transition duration-300 ease-in-out transform hover:scale-110"
+                    className="hover:text-ui-fg-base"
                   >
-                    <FontAwesomeIcon icon={faFacebook} style={{ height: "20px", width: "20px" }} />
+                    Facebook Page Link
                   </a>
                 </li>
                 <li>
@@ -130,18 +119,26 @@ export default async function Footer() {
                     href="https://www.instagram.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-gray-400 flex items-center gap-2 transition duration-300 ease-in-out transform hover:scale-110"
+                    className="hover:text-ui-fg-base"
                   >
-                    <FontAwesomeIcon icon={faInstagram} style={{ height: "20px", width: "20px" }} />
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    
                   </a>
                 </li>
               </ul>
-            
             </div>
           </div>
         </div>
-        <hr className="border-white w-full ysmall:hidden" />
-        <div className="flex w-full mb-16 justify-between text-gray-400">
+        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Sea Sky. All rights reserved.
           </Text>
@@ -149,5 +146,5 @@ export default async function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
