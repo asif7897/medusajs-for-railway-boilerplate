@@ -34,7 +34,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, auto = true, interval = 300
 
   return (
     <div className={styles.carousel}>
-      {/* <button onClick={goToPrevious} className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}>❮</button> */}
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
@@ -42,7 +41,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, auto = true, interval = 300
           </div>
         ))}
       </div>
-      {/* <button onClick={goToNext} className={`${styles.carouselButton} ${styles.carouselButtonRight}`}>❯</button> */}
       <div className={styles.navigationDots}>
         {images.map((_, index) => (
           <button

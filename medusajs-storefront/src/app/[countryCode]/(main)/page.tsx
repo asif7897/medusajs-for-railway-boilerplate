@@ -7,6 +7,10 @@ import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 import Carousel from "Components/Carousel/Carousel"
+import CategorySlick from "Files/HomePage/Category-slider"
+import CarouselMulti from "Components/Carousel-multi"
+import Carousel__ from "Components/Carousel-multi"
+import Slider from "react-slick"
 
 export const metadata: Metadata = {
   title: "Sea Sky",
@@ -71,18 +75,48 @@ export default async function Home({
     'https://www.yellowclothing.net/cdn/shop/files/slider-main.jpg?v=1715840962&width=2000',
     'https://www.yellowclothing.net/cdn/shop/files/Web-2_2c337e09-a006-463a-b823-d1a608f9e8b8.jpg?v=1716195778&width=2000',
   ];
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const slides = [
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379189/PKC_7433copy_grcqfn.jpg",
+      name: "Suit",
+      value: "suit"
+    },
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379758/st1366_tiwmqi.jpg",
+      name: "Blazer",
+      value: "blazer"
+    },
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379503/PKC_6783copy_jfer1o.jpg",
+      name: "Punjabi",
+      value: "punjabi"
+    },
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379885/09-05-2024product00376_1024x1024_2x_j7tk27.jpg",
+      name: "Formal shirt",
+      value: "shirt"
+    },
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380349/90_1010982-1A07978_1B000_10_WoolFormalPants-Clothing-Versace-online-store_1_3_x7zrpk.png",
+      name: "Pant",
+      value: "pant"
+    },
+    {
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380496/A23WS0152363408_BLUE_vmxomo.jpg",
+      name: "Shirt",
+      value: "shirt"
+    },
+  ]
+
   return (
     <>
 
       <Carousel images={images} auto interval={5000} />
-      {/* <Hero /> */}
+      <div className="w-full ">
+        <div className="px-[10px]">
+          <CategorySlick slides={slides} />
+        </div>
+      </div>
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />

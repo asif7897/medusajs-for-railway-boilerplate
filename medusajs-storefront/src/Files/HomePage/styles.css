@@ -1,0 +1,80 @@
+.main_slick {
+    height: 100%;
+
+}
+
+.slick-list {
+    height: 100%;
+    /* padding: 0px 15px; */
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slick-slide {
+    height: 100%;
+}
+
+.slick-slide div {
+    padding: 50px 10px 30px;
+}
+
+.slick-slide div img {
+    height: 500px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.image_box {
+    height: 500px;
+    background-size: cover !important;
+    padding: 0px !important
+}
+
+.slick-next {
+    display: none !important;
+    right: 0px !important;
+}
+
+.slick-button {
+    width: 40px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+.slick-next::before {
+    display: none;
+}
+
+.slick-prev::before {
+    display: none;
+}
+
+.slick-prev {
+    display: none !important;
+    left: 0px !important;
+    z-index: 1000;
+}
+
+.main_slick:hover .slick-next {
+    display: flex !important;
+}
+
+.main_slick:hover .slick-prev {
+    display: flex !important;
+}
+
+.link_box {
+    background: linear-gradient(0deg, #00000085, transparent);
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.link_box:hover{
+    background: #0000004a;
+}

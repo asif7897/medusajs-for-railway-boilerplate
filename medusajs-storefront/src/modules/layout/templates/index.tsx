@@ -2,6 +2,8 @@ import React from "react"
 
 import Footer from "@modules/layout/templates/footer"
 import Nav from "@modules/layout/templates/nav"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Layout: React.FC<{
   children: React.ReactNode
