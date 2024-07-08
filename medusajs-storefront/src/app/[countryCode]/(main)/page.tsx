@@ -8,9 +8,6 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 import Carousel from "Components/Carousel/Carousel"
 import CategorySlick from "Files/HomePage/Category-slider"
-import CarouselMulti from "Components/Carousel-multi"
-import Carousel__ from "Components/Carousel-multi"
-import Slider from "react-slick"
 
 export const metadata: Metadata = {
   title: "Sea Sky",

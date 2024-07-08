@@ -7,6 +7,7 @@ import './styles.css'
 import Link from "next/link";
 import { Arrow, ArrowLeft, ArrowRight } from "Components/Icons";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
+import Carousel from "Components/Carousel-multi/Carousel";
 interface ArrowProps {
     className?: string;
     style?: React.CSSProperties;
@@ -79,8 +80,10 @@ const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
     };
     return (
         <>
-            <div className="w-full">
-                <Slider {...settings} className={'main_slick'}>
+            <div className="w-full h-[500px]" style={{
+                height:"500px"
+            }}>
+                {/* <Slider {...settings} className={'main_slick'}>
                     {slides.map((i: any, id: number) => {
                         return (
                             <>
@@ -98,7 +101,8 @@ const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
                             </>
                         )
                     })}
-                </Slider>
+                </Slider> */}
+                <Carousel />
             </div>
         </>
     )
