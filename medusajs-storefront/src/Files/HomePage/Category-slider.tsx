@@ -50,7 +50,7 @@ interface CategorySlickProps {
 
 const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
 
-    const settings: Settings = {
+    const settings = {
         dots: false,
         infinite: true,
         speed: 300,
