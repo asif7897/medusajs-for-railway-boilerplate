@@ -1,15 +1,18 @@
 "use client"
 import React from "react"
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './styles.css'
 import Link from "next/link";
 import { Arrow, ArrowLeft, ArrowRight } from "Components/Icons";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
-
-
-function SampleNextArrow(props: any) {
+interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+function SampleNextArrow(props: ArrowProps) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -22,7 +25,7 @@ function SampleNextArrow(props: any) {
     );
 }
 
-function SamplePrevArrow(props: any) {
+function SamplePrevArrow(props: ArrowProps) {
     const { className, style, onClick } = props;
     return (
         <div
@@ -36,12 +39,18 @@ function SamplePrevArrow(props: any) {
     );
 }
 
+interface CategorySlickProps {
+    slides: {
+        image: string;
+        value: string;
+        name: string;
+    }[];
+}
 
 
+const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
 
-const CategorySlick = ({ slides }: any) => {
-
-    const settings = {
+    const settings: Settings = {
         dots: false,
         infinite: true,
         speed: 300,
@@ -79,9 +88,6 @@ const CategorySlick = ({ slides }: any) => {
                                 <div className='image_box' style={{
                                     background: `url(${i.image})`
                                 }}
-                                    onClick={() => {
-                                        // navigate(`/collections/${i.value}`)
-                                    }}
                                 >
                                     <LocalizedClientLink href={`/collections/${i.value}`} className="w-full h-full flex justify-center items-end pb-10 text-[#fff] text-[20px] font-[500] poppins link_box">
 
