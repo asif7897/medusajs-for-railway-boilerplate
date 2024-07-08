@@ -24,6 +24,10 @@
     padding-bottom: 20px;
 }
 
+.caption_:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .caption_ p {
     font-size: 24px;
     color: #fff;
@@ -38,6 +42,7 @@
 .react-multiple-carousel__arrow--right {
     right: calc(3%)
 }
+
 .react-multiple-carousel__arrow--left {
     left: calc(3%)
 }
