@@ -7,13 +7,11 @@ import './styles.css'
 import Link from "next/link";
 import { Arrow, ArrowLeft, ArrowRight } from "Components/Icons";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
-
 interface ArrowProps {
     className?: string;
     style?: React.CSSProperties;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
-
 function SampleNextArrow(props: ArrowProps) {
     const { className, style, onClick } = props;
     return (
@@ -35,6 +33,7 @@ function SamplePrevArrow(props: ArrowProps) {
             style={{ ...style }}
             onClick={onClick}
         >
+
             <ArrowRight size="30px" color="#fff" />
         </div>
     );
@@ -48,8 +47,10 @@ interface CategorySlickProps {
     }[];
 }
 
+
 const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
-    const settings: Settings = {
+
+    const settings = {
         dots: false,
         infinite: true,
         speed: 300,
@@ -74,25 +75,33 @@ const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
             },
         ],
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        className: 'main_slick'
+        prevArrow: <SamplePrevArrow />
     };
-
     return (
-        <div className="w-full">
-            <Slider {...settings}>
-                {slides.map((slide, id) => (
-                    <div key={id} className='image_box' style={{
-                        background: "red"
-                    }}>
-                        <LocalizedClientLink href={`/collections/${slide.value}`} className="w-full h-full flex justify-center items-end pb-10 text-[#fff] text-[20px] font-[500] poppins link_box">
-                            {slide.name}
-                        </LocalizedClientLink>
-                    </div>
-                ))}
-            </Slider>
-        </div>
-    );
+        <>
+            <div className="w-full">
+                <Slider {...settings} className={'main_slick'}>
+                    {slides.map((i: any, id: number) => {
+                        return (
+                            <>
+
+                                <div className='image_box' style={{
+                                    background: `url(${i.image})`
+                                }}
+                                >
+                                    <LocalizedClientLink href={`/collections/${i.value}`} className="w-full h-full flex justify-center items-end pb-10 text-[#fff] text-[20px] font-[500] poppins link_box">
+
+                                        {i.name}
+                                    </LocalizedClientLink>
+
+                                </div>
+                            </>
+                        )
+                    })}
+                </Slider>
+            </div>
+        </>
+    )
 }
 
-export default CategorySlick;
+export default CategorySlick
