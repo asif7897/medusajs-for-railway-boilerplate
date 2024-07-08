@@ -1,0 +1,30 @@
+.react-multi-carousel-list {
+    height: 100%;
+    padding-top: 40px;
+}
+
+.react-multi-carousel-track {
+    height: 100%;
+}
+
+.slide_image {
+    background-size: cover !important;
+}
+
+.react-multi-carousel-item {
+    padding: 10px 15px;
+}
+
+.caption_ {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.537), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.caption_ p {
+    font-size: 24px;
+    color: #fff;
+}

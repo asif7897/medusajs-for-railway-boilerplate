@@ -1,43 +1,12 @@
 "use client"
 import React from "react"
-import Slider, { Settings } from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import './styles.css'
-import Link from "next/link";
-import { Arrow, ArrowLeft, ArrowRight } from "Components/Icons";
-import LocalizedClientLink from "@modules/common/components/localized-client-link";
-import Carousel from "Components/Carousel-multi/Carousel";
+import FashionCarousel from "Components/Carousel-2";
+
 interface ArrowProps {
     className?: string;
     style?: React.CSSProperties;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
-}
-function SampleNextArrow(props: ArrowProps) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={`${className} slick-button`}
-            style={{ ...style }}
-            onClick={onClick}
-        >
-            <ArrowLeft size="30px" color="#fff" />
-        </div>
-    );
-}
-
-function SamplePrevArrow(props: ArrowProps) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={`${className} slick-button`}
-            style={{ ...style }}
-            onClick={onClick}
-        >
-
-            <ArrowRight size="30px" color="#fff" />
-        </div>
-    );
 }
 
 interface CategorySlickProps {
@@ -49,60 +18,55 @@ interface CategorySlickProps {
 }
 
 
-const CategorySlick: React.FC<CategorySlickProps> = ({ slides }) => {
+interface Slide {
+    image: string;
+    name: string;
+    value: string;
+}
+const CategorySlick: React.FC<CategorySlickProps> = () => {
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        cssEase: 'linear',
-        arrows: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    };
+
+    const slides: Slide[] = [
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379189/PKC_7433copy_grcqfn.jpg",
+            name: "Suit",
+            value: "suit"
+        },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379758/st1366_tiwmqi.jpg",
+            name: "Blazer",
+            value: "blazer"
+        },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379503/PKC_6783copy_jfer1o.jpg",
+            name: "Punjabi",
+            value: "punjabi"
+        },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379885/09-05-2024product00376_1024x1024_2x_j7tk27.jpg",
+            name: "Formal shirt",
+            value: "shirt"
+        },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380349/90_1010982-1A07978_1B000_10_WoolFormalPants-Clothing-Versace-online-store_1_3_x7zrpk.png",
+            name: "Pant",
+            value: "pant"
+        },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380496/A23WS0152363408_BLUE_vmxomo.jpg",
+            name: "Shirt",
+            value: "shirt"
+        },
+    ];
     return (
         <>
-            <div className="w-full h-[500px]" style={{
-                height:"500px"
-            }}>
-                {/* <Slider {...settings} className={'main_slick'}>
-                    {slides.map((i: any, id: number) => {
-                        return (
-                            <>
-
-                                <div className='image_box' style={{
-                                    background: `url(${i.image})`
-                                }}
-                                >
-                                    <LocalizedClientLink href={`/collections/${i.value}`} className="w-full h-full flex justify-center items-end pb-10 text-[#fff] text-[20px] font-[500] poppins link_box">
-
-                                        {i.name}
-                                    </LocalizedClientLink>
-
-                                </div>
-                            </>
-                        )
-                    })}
-                </Slider> */}
-                <Carousel />
+            <div className="w-full pt-[40px]">
+                <div className="w-full h-[500px]" style={{
+                    height: "500px"
+                }}>
+                    <FashionCarousel slides={slides} />
+                    {/* <Carousel /> */}
+                </div>
             </div>
         </>
     )
