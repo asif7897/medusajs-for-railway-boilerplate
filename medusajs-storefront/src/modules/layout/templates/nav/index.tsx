@@ -51,7 +51,9 @@ export default async function Nav() {
   ]
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
+    <div className="sticky top-0 inset-x-0 group" style={{
+      zIndex: 100000
+    }}>
       <header className="relative mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav className=" txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex flex-col w-full" >

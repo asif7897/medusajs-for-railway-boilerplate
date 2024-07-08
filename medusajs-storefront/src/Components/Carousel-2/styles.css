@@ -28,3 +28,16 @@
     font-size: 24px;
     color: #fff;
 }
+
+.react-multiple-carousel__arrow {
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 50px;
+    height: 100px;
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(3%)
+}
+.react-multiple-carousel__arrow--left {
+    left: calc(3%)
+}
