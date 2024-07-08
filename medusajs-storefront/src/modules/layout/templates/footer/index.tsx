@@ -1,7 +1,5 @@
 import { Text, clx } from "@medusajs/ui"
-
 import { getCategoriesList, getCollectionsList } from "@lib/data"
-
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 
@@ -10,13 +8,13 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
+    <footer className="border-t border-ui-border-base w-full bg-black text-white"> {/* Updated background and text color */}
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-white uppercase"
             >
               S E A S K Y 
             </LocalizedClientLink>
@@ -25,12 +23,12 @@ export default async function Footer() {
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
+                   CATEGORIES
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
                     if (c.parent_category) {
-                      return
+                      return null;  // Ensure to return null when condition is met
                     }
 
                     const children =
@@ -47,7 +45,7 @@ export default async function Footer() {
                       >
                         <LocalizedClientLink
                           className={clx(
-                            "hover:text-ui-fg-base",
+                            "hover:text-white",
                             children && "txt-small-plus"
                           )}
                           href={`/categories/${c.handle}`}
@@ -56,17 +54,16 @@ export default async function Footer() {
                         </LocalizedClientLink>
                         {children && (
                           <ul className="grid grid-cols-1 ml-3 gap-2">
-                            {children &&
-                              children.map((child) => (
-                                <li key={child.id}>
-                                  <LocalizedClientLink
-                                    className="hover:text-ui-fg-base"
-                                    href={`/categories/${child.handle}`}
-                                  >
-                                    {child.name}
-                                  </LocalizedClientLink>
-                                </li>
-                              ))}
+                            {children.map((child) => (
+                              <li key={child.id}>
+                                <LocalizedClientLink
+                                  className="hover:text-white"
+                                  href={`/categories/${child.handle}`}
+                                >
+                                  {child.name}
+                                </LocalizedClientLink>
+                              </li>
+                            ))}
                           </ul>
                         )}
                       </li>
@@ -78,7 +75,7 @@ export default async function Footer() {
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
+                  COLLECTIONS
                 </span>
                 <ul
                   className={clx(
@@ -91,7 +88,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
+                        className="hover:text-white"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -102,14 +99,14 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Sea Sky</span>
+              <span className="txt-small-plus txt-ui-fg-base">SEA SKY </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
                     href="https://www.facebook.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                    className="hover:text-white"
                   >
                     Facebook Page Link
                   </a>
@@ -119,7 +116,7 @@ export default async function Footer() {
                     href="https://www.instagram.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                    className="hover:text-white"
                   >
                     Instagram
                   </a>
@@ -129,7 +126,7 @@ export default async function Footer() {
                     href=""
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                    className="hover:text-white"
                   >
                     
                   </a>
