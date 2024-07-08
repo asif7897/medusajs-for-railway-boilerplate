@@ -48,7 +48,7 @@ const CategorySlick = ({ slides }: any) => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000000,
+        autoplaySpeed: 4000,
         cssEase: 'linear',
         arrows: true,
         responsive: [
