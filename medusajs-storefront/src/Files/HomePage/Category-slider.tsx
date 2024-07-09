@@ -61,8 +61,8 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
     return (
         <>
             <div className="w-full pt-[40px]">
-                <div className="w-full h-[500px]" style={{
-                    height: "500px"
+                <div className="w-full h-[500px] slider_main_box" style={{
+                    height: "80vh"
                 }}>
                     <FashionCarousel slides={slides} />
                     {/* <Carousel /> */}

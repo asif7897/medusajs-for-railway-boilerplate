@@ -2,13 +2,14 @@ import { Text, clx } from "@medusajs/ui"
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import './styles.css'
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-ui-border-base w-full bg-black text-white"> {/* Updated background and text color */}
+    <footer className="border-t border-ui-border-base w-full bg-black text-white footer_class"> {/* Updated background and text color */}
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           <div>
@@ -45,7 +46,7 @@ export default async function Footer() {
                       >
                         <LocalizedClientLink
                           className={clx(
-                            "hover:text-white",
+                            "hover:text-white poppins",
                             children && "txt-small-plus"
                           )}
                           href={`/categories/${c.handle}`}
@@ -57,7 +58,7 @@ export default async function Footer() {
                             {children.map((child) => (
                               <li key={child.id}>
                                 <LocalizedClientLink
-                                  className="hover:text-white"
+                                  className="hover:text-white poppins"
                                   href={`/categories/${child.handle}`}
                                 >
                                   {child.name}
@@ -88,7 +89,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="hover:text-white"
+                        className="hover:text-white poppins"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -106,7 +107,7 @@ export default async function Footer() {
                     href="https://www.facebook.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-white"
+                    className="hover:text-white poppins"
                   >
                     Facebook Page Link
                   </a>
@@ -116,7 +117,7 @@ export default async function Footer() {
                     href="https://www.instagram.com/seasky.ltd"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-white"
+                    className="hover:text-white poppins"
                   >
                     Instagram
                   </a>

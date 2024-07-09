@@ -1,0 +1,10 @@
+.footer_class a {
+    animation: color 1s;
+    color: #c7c6c6;
+    transition: 0.2s;
+}
+
+.footer_class a:hover {
+    text-decoration: underline;
+
+}

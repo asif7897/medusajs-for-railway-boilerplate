@@ -75,6 +75,19 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.link_box:hover{
+
+.link_box:hover {
     background: #0000004a;
+}
+
+.slider_main_box {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+@media only screen and (max-width: 550px) {
+    .slider_main_box {
+        min-height: 80vh;
+        max-height: 80vh;
+    }
 }
