@@ -5,7 +5,7 @@ import { getCollectionsList, getProductsList, getRegion } from "@lib/data"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
-import { cache } from "react"
+import { cache, useEffect, useState } from "react"
 import Carousel from "Components/Carousel/Carousel"
 import CategorySlick from "Files/HomePage/Category-slider"
 
@@ -63,15 +63,11 @@ export default async function Home({
 }) {
   const collections = await getCollectionsWithProducts(countryCode)
   const region = await getRegion(countryCode)
-
   if (!collections || !region) {
     return null
   }
-  const images: string[] = [
-    'https://www.yellowclothing.net/cdn/shop/files/slider-ethnic.jpg?v=1715843122&width=2000',
-    'https://www.yellowclothing.net/cdn/shop/files/slider-main.jpg?v=1715840962&width=2000',
-    'https://www.yellowclothing.net/cdn/shop/files/Web-2_2c337e09-a006-463a-b823-d1a608f9e8b8.jpg?v=1716195778&width=2000',
-  ];
+
+
   const slides = [
     {
       image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379189/PKC_7433copy_grcqfn.jpg",
@@ -108,7 +104,7 @@ export default async function Home({
   return (
     <>
 
-      <Carousel images={images} auto interval={5000} />
+      <Carousel  auto interval={5000} />
       <div className="w-full ">
         <div className="px-[10px]">
           <CategorySlick slides={slides} />

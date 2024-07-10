@@ -148,7 +148,6 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         </div>
                         <ul className="flex flex-col gap-6 items-start justify-start">
                           {Object.entries(SideMenuItems).map(([name, href], index) => {
-                            console.log(name)
                             if (name == "Shop By Category") {
                               return (
                                 <li key={name} className="w-full sm:hidden xs: block ">

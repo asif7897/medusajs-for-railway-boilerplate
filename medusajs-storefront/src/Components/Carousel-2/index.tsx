@@ -15,11 +15,11 @@ const FashionCarousel: React.FC<Props> = ({ slides }) => {
             items: 3,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 550 },
+            breakpoint: { max: 1024, min: 650 },
             items: 2,
         },
         mobile: {
-            breakpoint: { max: 550, min: 0 },
+            breakpoint: { max: 650, min: 0 },
             items: 1,
         },
     };
