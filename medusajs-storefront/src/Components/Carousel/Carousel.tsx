@@ -14,7 +14,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const images: string[] = [
 
-    // widthIs > 650 ? "https://cdn.sanity.io/images/tgi56uf8/production/def4464f11ecc6e529c18978bb9233139063e3e8-3200x1154.jpg?auto=format&fit=max&q=75&w=2800" : "https://cdn.sanity.io/images/tgi56uf8/production/472558e1489a73991716c1e3e490087790322164-1400x1600.jpg?auto=format&fit=max&q=75&w=700",
+    widthIs > 650 ? "https://cdn.sanity.io/images/tgi56uf8/production/def4464f11ecc6e529c18978bb9233139063e3e8-3200x1154.jpg?auto=format&fit=max&q=75&w=2800" : "https://cdn.sanity.io/images/tgi56uf8/production/472558e1489a73991716c1e3e490087790322164-1400x1600.jpg?auto=format&fit=max&q=75&w=700",
     'https://www.yellowclothing.net/cdn/shop/files/slider-ethnic.jpg?v=1715843122&width=2000',
     'https://www.yellowclothing.net/cdn/shop/files/slider-main.jpg?v=1715840962&width=2000',
     'https://www.yellowclothing.net/cdn/shop/files/Web-2_2c337e09-a006-463a-b823-d1a608f9e8b8.jpg?v=1716195778&width=2000',
@@ -55,37 +55,37 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     setCurrentIndex(newIndex);
   };
 
-  if (widthIs < 650) {
-    return (
-      <div className={styles.carousel}>
-        <img
-          src="https://cdn.sanity.io/images/tgi56uf8/production/472558e1489a73991716c1e3e490087790322164-1400x1600.jpg?auto=format&fit=max&q=75&w=700" />
-      </div>
-    )
-  } else {
-    return (
+  // if (widthIs < 650) {
+  //   return (
+  //     <div className={styles.carousel}>
+  //       <img
+  //         src="https://cdn.sanity.io/images/tgi56uf8/production/472558e1489a73991716c1e3e490087790322164-1400x1600.jpg?auto=format&fit=max&q=75&w=700" />
+  //     </div>
+  //   )
+  // } else {
+  return (
 
-      <div className={styles.carousel}>
-        <div className={styles.carouselSlide}>
-          {images.map((image, index) => (
-            <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
-              <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
-            </div>
-          ))}
-        </div>
-        <div className={styles.navigationDots}>
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+    <div className={styles.carousel}>
+      <div className={styles.carouselSlide}>
+        {images.map((image, index) => (
+          <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
+            <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
+          </div>
+        ))}
       </div>
-    );
-  }
+      <div className={styles.navigationDots}>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+  // }
 }
 
 export default Carousel;
