@@ -1,0 +1,26 @@
+
+.buttonLinkWrapper {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #000;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(168, 28, 28, 0.3);
+    transition: background-color 0.3s ease;
+    position: relative; /* Make sure to have a relative position for pseudo-elements */
+}
+
+.buttonLinkWrapper::after {
+    content: none; /* Remove the content if it's used for the arrow */
+    background: none; /* Remove any background image or arrow */
+}
+
+.buttonLinkWrapper a {
+    color: inherit; /* Make sure the link inherits the color */
+    text-decoration: none; /* Remove underline from link */
+    display: block; /* Ensure the link is block-level for padding */
+    height: 100%; /* Ensure the link takes the full height of the wrapper */
+    width: 100%; /* Ensure the link takes the full width of the wrapper */
+}
