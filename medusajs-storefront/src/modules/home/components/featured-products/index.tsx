@@ -1,8 +1,14 @@
+import React from 'react';
 import '../featured-products/product-rail/style.css'; // Path to your CSS file
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import LocalizedClientLink from "@modules/common/components/localized-client-link";
 
+// Define types for the props (Replace `any` with actual types if known)
+interface FeaturedProductsProps {
+  collections: any; // Replace `any` with the actual type of collections
+  region: any; // Replace `any` with the actual type of region
+}
 
-const FeaturedProducts: React.FC = () => {
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region }) => {
   const backgroundImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1719258169/samples/ecommerce/analog-classic.jpg';
 
   return (
@@ -31,4 +37,3 @@ const FeaturedProducts: React.FC = () => {
 }
 
 export default FeaturedProducts;
-
