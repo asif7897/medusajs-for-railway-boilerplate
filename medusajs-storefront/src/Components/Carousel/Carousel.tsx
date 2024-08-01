@@ -15,7 +15,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   const images: string[] = widthIs < 650 ?
   [
     "https://i.ibb.co/JFXBmvR/for-mobile.png",
-    "https://i.ibb.co/n8HQB23/womens-were-png-real.png",
+    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720706707/WEB_20BANNER_zkugsp.jpg",
     "https://i.ibb.co/NnfNR7W/womens-were-png-mobile.png"
   ]:
   [
@@ -70,6 +70,8 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   return (
 
     <div className={styles.carousel}>
+ 
+      
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
