@@ -16,7 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   [
     "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538623/fdsf_nchivm.webp",
     "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/womens_were.png_mobile_mnqekk.webp",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538587/womens_were.png_real_jk3osp.webp"
+    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722541646/picture_a7eq0n.webp"
   ]:
   [
     'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538412/_SDP9211-Recovered-Recovered_opdmbl.webp',
