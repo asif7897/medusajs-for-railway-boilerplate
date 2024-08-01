@@ -3,28 +3,82 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import './styles.css'
+import { Address } from "../../../../lib/util/address-list"
+import { Routes } from "@lib/util/footer-link-list"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
+  const newArr = [
+    {
+      id: 0,
+      name: "Store Locator",
+      text: "Find Our Store",
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722530900/location-icon_chzd0g.svg"
+    },
+    {
+      id: 1,
+      name: "Store Locator",
+      text: "Find Our Store",
+      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722530900/location-icon_chzd0g.svg"
+    }
+  ]
 
   return (
     <footer className="border-t border-ui-border-base w-full bg-black text-white footer_class"> {/* Updated background and text color */}
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-white uppercase"
-            >
-              S E A S K Y 
-            </LocalizedClientLink>
+          <div className="flex flex-col">
+            <div>
+              <LocalizedClientLink
+                href="/"
+                className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-white uppercase"
+              >
+                S E A S K Y
+              </LocalizedClientLink>
+            </div>
+            <div className="flex flex-col">
+
+              <div className="flex gap-x-[13px] h-[74px] rounded-[100px] items-center border border-[#fff] border-solid py-[12px] px-[30px] pr-[40px]">
+                <div className="">
+                  <img className="h-[25px]" src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722530900/location-icon_chzd0g.svg" />
+                </div>
+                <div className="w-[1px] bg-[#fff] h-[40px]" />
+                <div className="pl-[7px] flex flex-col">
+                  <p className="text-[14px] font-[400] poppins">Store Locator</p>
+                  <p>Find Our Store</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+
+          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-4">
+            {/*  */}
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">
+                CATEGORIES
+              </span>
+              <ul className="grid grid-cols-1 gap-2">
+                {Routes.map((item, index) => {
+                  return (
+                    <>
+                      <li key={item.text}>
+                        <LocalizedClientLink
+                          className="hover:text-white poppins"
+                          href={item.link}
+                        >
+                          {item.text}
+                        </LocalizedClientLink>
+                      </li>
+                    </>
+                  )
+                })}
+              </ul>
+            </div>
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                   CATEGORIES
+                  CATEGORIES
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
@@ -129,7 +183,7 @@ export default async function Footer() {
                     rel="noreferrer"
                     className="hover:text-white"
                   >
-                    
+
                   </a>
                 </li>
               </ul>
