@@ -9,7 +9,7 @@ interface FeaturedProductsProps {
 }
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region }) => {
-  const backgroundImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1719258169/samples/ecommerce/analog-classic.jpg';
+  const backgroundImageSrc = 'https://i.ibb.co/n8HQB23/womens-were-png-real.png';
 
   return (
     <div
