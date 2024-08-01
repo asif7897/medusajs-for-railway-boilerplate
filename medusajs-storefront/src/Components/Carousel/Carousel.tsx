@@ -14,14 +14,14 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const images: string[] = widthIs < 650 ?
   [
-    "https://i.ibb.co/JFXBmvR/for-mobile.png",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720706707/WEB_20BANNER_zkugsp.jpg",
-    "https://i.ibb.co/NnfNR7W/womens-were-png-mobile.png"
+    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538623/fdsf_nchivm.webp",
+    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/womens_were.png_mobile_mnqekk.webp",
+    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538587/womens_were.png_real_jk3osp.webp"
   ]:
   [
-    'https://i.ibb.co/p0WHgvX/first.png',
-    'https://i.ibb.co/yFGg9ns/SDP9211-Recovered-Recovered.png',
-    'https://i.ibb.co/Dkmxrz1/SDP9388.png',
+    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538412/_SDP9211-Recovered-Recovered_opdmbl.webp',
+    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp',
+    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/first_diehe6.webp',
   ];
   useEffect(() => {
     if (auto) {
