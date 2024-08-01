@@ -14,14 +14,14 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const images: string[] = widthIs < 650 ?
   [
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720706756/472558e1489a73991716c1e3e490087790322164-1400x1600_jsifoo.jpg",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720706729/M-01_beshhv.png",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720706707/WEB_20BANNER_zkugsp.jpg"
+    "https://i.ibb.co/JFXBmvR/for-mobile.png",
+    "https://i.ibb.co/n8HQB23/womens-were-png-real.png",
+    "https://i.ibb.co/NnfNR7W/womens-were-png-mobile.png"
   ]:
   [
-    'https://www.yellowclothing.net/cdn/shop/files/slider-ethnic.jpg?v=1715843122&width=2000',
-    'https://www.yellowclothing.net/cdn/shop/files/slider-main.jpg?v=1715840962&width=2000',
-    'https://www.yellowclothing.net/cdn/shop/files/Web-2_2c337e09-a006-463a-b823-d1a608f9e8b8.jpg?v=1716195778&width=2000',
+    'https://i.ibb.co/p0WHgvX/first.png',
+    'https://i.ibb.co/yFGg9ns/SDP9211-Recovered-Recovered.png',
+    'https://i.ibb.co/Dkmxrz1/SDP9388.png',
   ];
   useEffect(() => {
     if (auto) {
