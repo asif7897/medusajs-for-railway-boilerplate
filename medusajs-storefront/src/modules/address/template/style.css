@@ -6,3 +6,14 @@
 .details_box_ button {
     background-color: #000;
 }
+
+
+@media only screen and (max-width: 1220px) {
+
+    .details_box_ {
+        flex-direction: column;
+    }
+    .details_box_ button div {
+        justify-content: center;
+    }
+}

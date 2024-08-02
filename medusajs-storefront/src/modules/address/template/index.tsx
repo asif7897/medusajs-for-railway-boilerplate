@@ -1,6 +1,8 @@
+'use client'
 import { Address } from "@lib/util/address-list";
 import React from "react";
 import './style.css'
+import { Button } from "Components/Reusable-Modules/buttons";
 
 const Row = ({ name, image, fw }: any) => {
     return (
@@ -28,7 +30,7 @@ const Address_page = () => {
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px] ">
                                         {item.locations.map((it, i) => {
                                             return (
-                                                <div key={i} className="address_box_ flex p-[18px] px-[15px] border border-[#dddddd] rounded-[10px] border-solid flex-col gap-y-[15px]">
+                                                <div key={i} className="address_box_ flex p-[18px] px-[15px] border border-[#dddddd] rounded-[10px] border-solid flex-col gap-y-[15px] justify-between">
                                                     <div className="flex flex-col gap-y-[20px]">
                                                         <Row
                                                             fw={500}
@@ -41,8 +43,23 @@ const Address_page = () => {
                                                     </div>
                                                     <div>
                                                         <div className="h-[1px] w-full bg-[#dddddd]" />
-                                                        <div className="details_box_ flex gap-[10px]">
-                                                            
+                                                        <div className="details_box_ flex gap-[10px] pt-[10px] justify-center md:flex-row xs:flex-col">
+                                                            <Button>
+                                                                <div className="flex items-center gap-1">
+                                                                    <img src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722530900/location-icon_chzd0g.svg" className="h-[14px]" />
+                                                                    <p className="text-[17px] text-[#fff] poppins font-[500]">
+                                                                        Show In Map
+                                                                    </p>
+                                                                </div>
+                                                            </Button>
+                                                            <Button>
+                                                                <div className="flex items-center gap-1.5">
+                                                                    <img src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722616608/home-svgrepo-com_1_o6kq8s.svg" className="h-[18px]" />
+                                                                    <p className="text-[17px] text-[#fff] poppins font-[500]">
+                                                                        Shop Details
+                                                                    </p>
+                                                                </div>
+                                                            </Button>
                                                         </div>
                                                     </div>
                                                 </div>
