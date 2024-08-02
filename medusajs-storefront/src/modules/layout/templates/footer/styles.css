@@ -8,3 +8,12 @@
     text-decoration: underline;
 
 }
+
+.address_box:hover {
+    border-color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.address_box p {
+    text-decoration: none !important;
+}

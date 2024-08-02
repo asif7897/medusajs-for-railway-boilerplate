@@ -1,8 +1,14 @@
+
 import { Text, clx } from "@medusajs/ui"
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import './styles.css'
+import { Address } from "../../../../lib/util/address-list"
+import { Routes } from "@lib/util/footer-link-list"
+import Link from "next/link"
+import { useNavigate } from "react-router-dom"
+import ContactButtons from "@modules/layout/components/contact-button"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
@@ -11,20 +17,46 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full bg-black text-white footer_class"> {/* Updated background and text color */}
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-white uppercase"
-            >
-              S E A S K Y 
-            </LocalizedClientLink>
+        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-20">
+          <div className="flex flex-col">
+            <div>
+              <LocalizedClientLink
+                href="/"
+                className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-white uppercase"
+              >
+                S E A S K Y
+              </LocalizedClientLink>
+            </div>
+            <ContactButtons />
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+
+          <div className="text-small-regular gap-10 md:gap-x-13 grid grid-cols-2 sm:grid-cols-4 md:pl-[40px]">
+            {/*  */}
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">
+                ABOUT US
+              </span>
+              <ul className="grid grid-cols-1 gap-2">
+                {Routes.map((item, index) => {
+                  return (
+                    <>
+                      <li key={item.text}>
+                        <LocalizedClientLink
+                          className="hover:text-white poppins"
+                          href={item.link}
+                        >
+                          {item.text}
+                        </LocalizedClientLink>
+                      </li>
+                    </>
+                  )
+                })}
+              </ul>
+            </div>
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                   CATEGORIES
+                  CATEGORIES
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
@@ -129,7 +161,7 @@ export default async function Footer() {
                     rel="noreferrer"
                     className="hover:text-white"
                   >
-                    
+
                   </a>
                 </li>
               </ul>
