@@ -44,7 +44,19 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
         { "name": "Suit", "handle": "suit" },
         { "name": "Punjabi", "handle": "punjabi" },
         { "name": "Formal Shirt", "handle": "shirt" },
-        { "name": "Pant", "handle": "pant" }
+        { "name": "Pant", "handle": "pant" },
+
+        //new add 3 aug 2024  
+
+        { "name": "Premium Suit", "handle": "premium_suit" },
+        { "name": "Platinum Blazer", "handle": "platinum_blazer" },
+        { "name": "Formal Shirt", "handle": "formal_shirt" },
+        { "name": "Elite Panjabi", "handle": "elite_panjabi" },
+        { "name": "Half Coat", "handle": "half_coat" },
+        { "name": "Formal Pant", "handle": "formal_pant" }
+
+
+
       ],
       image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnf2535.9d8b5746.png&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fst1366.ea9d30dc.png&w=384&q=75"]
     },
