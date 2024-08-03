@@ -37,6 +37,7 @@ const Address_page = () => {
                                                     <div className="flex flex-col gap-y-[20px]">
                                                         <Row
                                                             fw={500}
+                                                            
                                                             name={it.address}
                                                             image="
                                                             https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722539010/building-svgrepo-com_oiceka.svg" />
