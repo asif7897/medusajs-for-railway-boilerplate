@@ -40,7 +40,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
       "sub_categories": [
         { "name": "Blazer", "handle": "blazer" },
         { "name": "Single Blazer", "handle": "s_blazer" },
-        { "name": "Tiebox", "handle": "tiebox" },
+        { "name": "Box-tie", "handle": "box_tie" },
         { "name": "Suit", "handle": "suit" },
         { "name": "Punjabi", "handle": "punjabi" },
         { "name": "Formal Shirt", "handle": "shirt" },
@@ -60,9 +60,10 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
     {
       "main_category": "Accessory",
       "sub_categories": [
-        { "name": "Tiebox", "handle": "tiebox" },
-        { "name": "Belt", "handle": "belt" },
-        { "name": "Tie-pin", "handle": "tie_pin" }
+        { "name": "Box-tie", "handle": "box_tie" },
+        { "name": "Luxury-belt", "handle": "luxury_belt" },
+        //3 aug 
+      //  { "name": "Tie-pin", "handle": "tie_pin" }
       ],
       image: ['https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-1.69702ddf.jpg&w=384&q=75', "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Facces-2.f358fb03.jpg&w=384&q=75"]
     }

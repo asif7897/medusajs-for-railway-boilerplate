@@ -21,7 +21,7 @@ export default async function Nav() {
       "sub_categories": [
         { "name": "Blazer", "handle": "blazer" },
         { "name": "Single Blazer", "handle": "s_blazer" },
-        { "name": "Tiebox", "handle": "tiebox" },
+        { "name": "Box-tie", "handle": "box_tie" },
         { "name": "Suit", "handle": "suit" },
         { "name": "Punjabi", "handle": "punjabi" },
         { "name": "Formal Shirt", "handle": "shirt" },
@@ -42,9 +42,11 @@ export default async function Nav() {
     {
       "main_category": "Accessory",
       "sub_categories": [
-        { "name": "Tiebox", "handle": "tiebox" },
-        { "name": "Belt", "handle": "belt" },
-        { "name": "Tie-pin", "handle": "tie_pin" }
+        { "name": "Box-tie", "handle": "box_tie" },
+        { "name": "Luxury-belt", "handle": "luxury_belt" }
+
+     // 3 aug .. 
+     //   { "name": "Tie-pin", "handle": "tie_pin" }
       ],
       image: [acce1, acce2]
     }
