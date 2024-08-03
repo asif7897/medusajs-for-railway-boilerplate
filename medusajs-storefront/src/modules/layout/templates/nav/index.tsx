@@ -33,9 +33,9 @@ export default async function Nav() {
     {
       "main_category": "Women",
       "sub_categories": [
-        { "name": "Blazer", "handle": "blazer_w" },
-        { "name": "Single Blazer", "handle": "s_blazer_w" },
-        { "name": "Suit", "handle": "suit_w" }
+      //  { "name": "Blazer", "handle": "blazer_w" },
+      //  { "name": "Single Blazer", "handle": "s_blazer_w" },
+        { "name": "Women's-suit", "handle": "women's_suit" }
       ],
       image: [women1, women2]
     },
