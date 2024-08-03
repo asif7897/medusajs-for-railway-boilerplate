@@ -25,6 +25,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region
         justifyContent: "center",
         flexDirection: "column",
       }}
+      className='max-w-[100%]'
     >
       <h1 style={{ fontSize: 50, color: "white", marginBottom: "20px" }}>Women Premium Suit</h1>
       <div className="buttonLinkWrapper">

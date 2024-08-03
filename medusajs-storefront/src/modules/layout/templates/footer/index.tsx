@@ -4,10 +4,7 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import './styles.css'
-import { Address } from "../../../../lib/util/address-list"
 import { Routes } from "@lib/util/footer-link-list"
-import Link from "next/link"
-import { useNavigate } from "react-router-dom"
 import ContactButtons from "@modules/layout/components/contact-button"
 
 export default async function Footer() {

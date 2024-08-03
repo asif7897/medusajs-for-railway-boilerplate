@@ -1,7 +1,7 @@
 export const Routes = [
     {
         "text": "About Us",
-        "link": "#"
+        "link": "/about-us"
     },
     {
         "text": "Shop Address",
