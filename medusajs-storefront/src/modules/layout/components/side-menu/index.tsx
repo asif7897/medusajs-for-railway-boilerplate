@@ -38,13 +38,13 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
     {
       "main_category": "Men",
       "sub_categories": [
-        { "name": "Blazer", "handle": "blazer" },
-        { "name": "Single Blazer", "handle": "s_blazer" },
-        { "name": "Box-tie", "handle": "box_tie" },
-        { "name": "Suit", "handle": "suit" },
-        { "name": "Punjabi", "handle": "punjabi" },
-        { "name": "Formal Shirt", "handle": "shirt" },
-        { "name": "Pant", "handle": "pant" },
+      //  { "name": "Blazer", "handle": "blazer" },
+      //  { "name": "Single Blazer", "handle": "s_blazer" },
+      //  { "name": "Box-tie", "handle": "box_tie" },
+      //  { "name": "Suit", "handle": "suit" },
+      //  { "name": "Punjabi", "handle": "punjabi" },
+      //  { "name": "Formal Shirt", "handle": "shirt" },
+      //  { "name": "Pant", "handle": "pant" },
 
         //new add 3 aug 2024  
 
@@ -63,8 +63,8 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
     {
       "main_category": "Women",
       "sub_categories": [
-        { "name": "Blazer", "handle": "blazer_w" },
-        { "name": "Single Blazer", "handle": "s_blazer_w" },
+       // { "name": "Blazer", "handle": "blazer_w" },
+      //  { "name": "Single Blazer", "handle": "s_blazer_w" },
         { "name": "Women's-suit", "handle": "women's_suit" }
       ],
       image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-1.dc76cb6f.jpg&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-2.031fff47.jpg&w=384&q=75"]
