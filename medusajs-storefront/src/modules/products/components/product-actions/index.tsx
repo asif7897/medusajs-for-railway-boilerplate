@@ -6,7 +6,7 @@ import { Button } from "@medusajs/ui"
 import { isEqual } from "lodash"
 import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
-
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useIntersection } from "@lib/hooks/use-in-view"
 import { addToCart } from "@modules/cart/actions"
 import Divider from "@modules/common/components/divider"
@@ -14,6 +14,7 @@ import OptionSelect from "@modules/products/components/option-select"
 
 import MobileActions from "../mobile-actions"
 import ProductPrice from "../product-price"
+import { CloseIcon } from "Components/Icons"
 
 type ProductActionsProps = {
   product: PricedProduct
@@ -33,7 +34,7 @@ export default function ProductActions({
 }: ProductActionsProps) {
   const [options, setOptions] = useState<Record<string, string>>({})
   const [isAdding, setIsAdding] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false)
   const countryCode = useParams().countryCode as string
 
   const variants = product.variants
@@ -123,8 +124,28 @@ export default function ProductActions({
     setIsAdding(false)
   }
 
+
   return (
     <>
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative" style={{
+        zIndex: 1000000
+      }} >
+        <div className="fixed inset-0 flex w-screen items-center justify-center p-4 bg-[#1515154f]">
+
+          <DialogPanel className="w-full max-w-lg space-y-4 border bg-white ">
+            <div className="relative">
+              <button className="absolute top-[10px] right-[10px]" onClick={() => {
+                setIsOpen(false)
+              }}>
+                <CloseIcon size="15px" />
+              </button>
+              <div className="p-12">
+                <img src={product?.collection?.metadata?.image as any} className="w-full " />
+              </div>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
       <div className="flex flex-col gap-y-2" ref={actionsRef}>
         <div>
           {product.variants.length > 1 && (
@@ -145,7 +166,14 @@ export default function ProductActions({
             </div>
           )}
         </div>
+        {product.collection?.metadata?.image ?
+          <div className="py-[20px] pt-[10px] border-b-[1px] border-solid border-gray-200">
+            <button onClick={() => {
+              setIsOpen(true)
+            }} className="bg-[transparent] text-[13px] text-[#000] border-b-[1px] border-solid border-[#000] poppins " >Show Chart</button>
+          </div>
 
+          : ""}
         <ProductPrice product={product} variant={variant} region={region} />
 
         <Button
@@ -158,8 +186,8 @@ export default function ProductActions({
           {!variant
             ? "Select variant"
             : !inStock
-            ? "Out of stock"
-            : "Add to cart"}
+              ? "Out of stock"
+              : "Add to cart"}
         </Button>
         <MobileActions
           product={product}
