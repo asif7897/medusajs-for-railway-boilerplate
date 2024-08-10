@@ -119,7 +119,7 @@ export default async function Home({
 
       <section className="pb-7 pt-10 space-y-1">
         <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold">
-          Hot Products
+          ACCESSORIES
         </h2>
         <div className="flex flex-col md:flex-row justify-start items-start h-[95vh] md:h-[80vh]">
           <div className="w-full md:w-1/2 h-full category-card-1" />
