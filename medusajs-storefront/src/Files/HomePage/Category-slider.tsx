@@ -63,7 +63,7 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
             <div className="w-full pt-[40px]">
             <div className="flex justify-center">
                     <h1 className="font-bold text-2xl tracking-widest mt-5">
-                       OUR NEW COLLECTIONS 
+                    MENS WEAR
                     </h1>
                 </div>
                 
