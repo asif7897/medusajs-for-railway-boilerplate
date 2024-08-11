@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
+import { Button } from 'Components/Reusable-Modules/buttons';
 
 interface CarouselProps {
   images?: string[];
@@ -8,21 +9,39 @@ interface CarouselProps {
   interval?: number; // Optional prop for interval between slides
 }
 
+const Button_custom = ({
+  text,
+  onClick,
+}: {
+  text: string,
+  onClick: () => void
+}) => {
+  return (
+    <Button bgColor='#fff !important' color='#000' borderRadius='5px' className="font-[500] text-[16px]" onClick={() => {
+      if (typeof onClick == 'function') {
+        onClick()
+      }
+    }}>
+      {text}
+    </Button>
+  )
+}
+
 const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [widthIs, setWidthIs] = useState<any>(665)
 
   const images: string[] = widthIs < 650 ?
-  [
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538623/fdsf_nchivm.webp",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/womens_were.png_mobile_mnqekk.webp",
-    "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722541646/picture_a7eq0n.webp"
-  ]:
-  [
-    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538412/_SDP9211-Recovered-Recovered_opdmbl.webp',
-    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp',
-    'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/first_diehe6.webp',
-  ];
+    [
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538623/fdsf_nchivm.webp",
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/womens_were.png_mobile_mnqekk.webp",
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722541646/picture_a7eq0n.webp"
+    ] :
+    [
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538412/_SDP9211-Recovered-Recovered_opdmbl.webp',
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp',
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/first_diehe6.webp',
+    ];
   useEffect(() => {
     if (auto) {
       const intervalId = setInterval(goToNext, interval);
@@ -67,14 +86,22 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   //     </div>
   //   )
   // } else {
+
+
   return (
 
     <div className={styles.carousel}>
- 
-      
+
+
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
+            <div className='flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins' >
+
+              <Button_custom text='Shop Men' onClick={() => { }} />
+              <Button_custom text='Shop Women' onClick={() => { }} />
+
+            </div>
             <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
           </div>
         ))}
