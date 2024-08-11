@@ -118,6 +118,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       </div>
     </div>
   );
+  
   // }
 }
 
