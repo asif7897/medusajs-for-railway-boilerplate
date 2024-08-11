@@ -96,7 +96,10 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
-            <div className='flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins' >
+            <div className='flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins' style={{
+              bottom:"30px",
+              left:"30px"
+            }} >
 
               <Button_custom text='Shop Men' onClick={() => { }} />
               <Button_custom text='Shop Women' onClick={() => { }} />
@@ -118,7 +121,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       </div>
     </div>
   );
-  
+
   // }
 }
 
