@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
 import { Button } from 'Components/Reusable-Modules/buttons';
+import Link from 'next/link';
+
 
 interface CarouselProps {
   images?: string[];
@@ -13,19 +15,49 @@ const Button_custom = ({
   text,
   onClick,
 }: {
-  text: string,
-  onClick: () => void
+  text: string;
+  onClick?: () => void;
 }) => {
   return (
-    <Button bgColor='#fff !important' color='#000' borderRadius='5px' className="font-[500] text-[16px]" onClick={() => {
-      if (typeof onClick == 'function') {
-        onClick()
-      }
-    }}>
-      {text}
-    </Button>
-  )
-}
+    <Link href="/collections/premium_suit" passHref>
+      <Button
+        bgColor="#fff !important"
+        color="#000"
+        borderRadius="5px"
+        className="font-[500] text-[16px]"
+        onClick={onClick}
+      >
+        {text}
+      </Button>
+    </Link>
+  );
+};
+
+
+const Button_custom2 = ({
+  text,
+  onClick,
+}: {
+  text: string;
+  onClick?: () => void;
+}) => {
+  return (
+    <Link href="/collections/women's_suit" passHref>
+      <Button
+        bgColor="#fff !important"
+        color="#000"
+        borderRadius="5px"
+        className="font-[500] text-[16px]"
+        onClick={onClick}
+      >
+        {text}
+      </Button>
+    </Link>
+  );
+};
+
+
+
 
 const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -102,7 +134,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
             }} >
 
               <Button_custom text='Shop Men' onClick={() => { }} />
-              <Button_custom text='Shop Women' onClick={() => { }} />
+              <Button_custom2 text='Shop Women' onClick={() => { }} />
 
             </div>
             <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
