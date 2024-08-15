@@ -11,6 +11,8 @@ interface CarouselProps {
   interval?: number; // Optional prop for interval between slides
 }
 
+
+
 const Button_custom = ({
   text,
   onClick,
@@ -21,10 +23,10 @@ const Button_custom = ({
   return (
     <Link href="/collections/premium_suit" passHref>
       <Button
-        bgColor="#fff !important"
-        color="#000"
+        bgColor="gray"
+        color="#fff"  // Set text color to white
         borderRadius="5px"
-        className="font-[500] text-[16px]"
+        className="font-[500] text-[16px] bg-gray-500 border-2 border-gray-500 hover:bg-black hover:border-black hover:text-white transition-colors duration-300"
         onClick={onClick}
       >
         {text}
@@ -42,12 +44,12 @@ const Button_custom2 = ({
   onClick?: () => void;
 }) => {
   return (
-    <Link href="/collections/women's_suit" passHref>
+    <Link href="/collections/premium_suit" passHref>
       <Button
-        bgColor="#fff !important"
-        color="#000"
+        bgColor="gray"
+        color="#fff"  // Set text color to white
         borderRadius="5px"
-        className="font-[500] text-[16px]"
+        className="font-[500] text-[16px] bg-gray-500 border-2 border-gray-500 hover:bg-black hover:border-black hover:text-white transition-colors duration-300"
         onClick={onClick}
       >
         {text}
@@ -59,20 +61,21 @@ const Button_custom2 = ({
 
 
 
+
 const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [widthIs, setWidthIs] = useState<any>(665)
 
   const images: string[] = widthIs < 650 ?
     [
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538623/fdsf_nchivm.webp",
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/womens_were.png_mobile_mnqekk.webp",
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722541646/picture_a7eq0n.webp"
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/2.2_c4cttl.webp",
+      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp"
     ] :
     [
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538412/_SDP9211-Recovered-Recovered_opdmbl.webp',
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp',
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/first_diehe6.webp',
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/3_uqfulu.webp',
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1_mbtjqq.webp',
+      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/2_tzhqd0.webp',
     ];
   useEffect(() => {
     if (auto) {
