@@ -127,21 +127,20 @@ export default async function Home({
         </div>
       </section>
 
-        <section className="pb-7 pt-10 space-y-1">
-  <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold">
-    GIFT CARD
-  </h2>
-  <div className="flex flex-col md:flex-row justify-start items-start h-[95vh] md:h-[80vh]">
-    <div 
-      className="w-full  h-full category-card-2"
-      style={{
-        backgroundImage: 'url(https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp)', // Background image URL
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
+      <section className="pb-7 pt-10 space-y-1">
+  <div className="image-container flex items-center justify-center relative w-full h-full">
+    <img
+      className="object-cover object-fit h-full w-full lg:h-[95vh] md:h-[80vh] transition-transform duration-500 ease-in-out transform hover:scale-105"
+      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp"
+      alt="Gift Card Image"
     />
+    <div className="blur-overlay absolute inset-0 bg-gray-900 opacity-50 z-10"></div>
+    <h2 className="absolute bottom-4 right-4 text-center text-2xl lg:text-3xl font-semibold text-white z-20 bg-gray-800 bg-opacity-70 p-4 rounded-lg shadow-lg border-2 border-gray-300 transition-transform duration-300 hover:scale-105 hover:bg-gray-700">
+      GIFT CARD
+    </h2>
   </div>
 </section>
+
 
 
 
