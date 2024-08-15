@@ -127,6 +127,23 @@ export default async function Home({
         </div>
       </section>
 
+        <section className="pb-7 pt-10 space-y-1">
+  <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold">
+    GIFT CARD
+  </h2>
+  <div className="flex flex-col md:flex-row justify-start items-start h-[95vh] md:h-[80vh]">
+    <div 
+      className="w-full  h-full category-card-2"
+      style={{
+        backgroundImage: 'url(https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722538407/_SDP9388_ulwy02.webp)', // Background image URL
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    />
+  </div>
+</section>
+
+
 
 
 
