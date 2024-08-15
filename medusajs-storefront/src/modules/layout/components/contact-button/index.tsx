@@ -10,7 +10,7 @@ const ContactButtons = () => {
         {
             id: 0,
             name: "Mobile",
-            text: "+00 0000000000",
+            text: "09666-720023",
             image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722535695/call-icon_ecnnqo.svg",
             link: "#"
 
@@ -32,7 +32,7 @@ const ContactButtons = () => {
                         <>
                             <div onClick={() => {
                                 navigate.push(item.link)
-                            }} key={index} className="w-[270px] address_box cursor-pointer flex gap-x-[13px] h-[70px] rounded-[100px] items-center border border-[#adadad] border-solid py-[10px] px-[30px] pr-[40px]">
+                            }} key={index} className="w-[270px] address_box cursor-pointer flex gap-x-[13px] h-[70px] rounded-[10px] items-center border border-[#adadad] border-solid py-[10px] px-[30px] pr-[40px]">
                                 <div className="">
                                     <img className="h-[25px]" src={item.image} />
                                 </div>
