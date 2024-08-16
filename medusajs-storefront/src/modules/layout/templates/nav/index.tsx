@@ -9,11 +9,11 @@ import MegaMenu from "Components/MegaMenu/MegaMenu";
 
 const imageUrls = {
   st1366: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723764992/1_cw6stl.webp',
-  nf2535: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765350/448339000_470383098861849_8993076245366460543_n_1719565453121_1_jdlnh9.webp', // Replace with correct URL
+  nf2535: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765350/448339000_470383098861849_8993076245366460543_n_1719565453121_1_jdlnh9.webp',
   women1: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723766143/M2720-P3800_1723125820159_mq6rud.webp',
   women2: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765541/M2726-P3800_1723126877702_o1mzrd.webp',
   acce1: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765839/hgjkloyygfdg_rfmfxm.webp',
-    acce2: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723798009/B_TIE_1.2_pwiyhm.webp'
+  acce2: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723798009/B_TIE_1.2_pwiyhm.webp'
 };
 
 export default async function Nav() {
@@ -51,8 +51,13 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 group" style={{ zIndex: 100000 }}>
-      <header className="relative mx-auto border-b duration-200 bg-white border-ui-border-base">
-        <nav className="txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
+
+<header className="relative mx-auto duration-200 bg-gray-700 pt-5 ">
+
+
+        <nav className="txt-xsmall-plus text-white font-bold flex items-center justify-between w-full h-full text-large-regular">
+          
+          
           <div className="flex flex-col w-full">
             <div className="content-container w-full h-12 items-center flex">
               <div className="flex flex-col w-full">
@@ -62,22 +67,29 @@ export default async function Nav() {
                       <SideMenu regions={regions} />
                     </div>
                   </div>
+                  
 
-                  <div className="flex items-center h-full">
-                    <LocalizedClientLink
-                      href="/"
-                      className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
-                      data-testid="nav-store-link"
-                    >
-                      S E A S K Y
-                    </LocalizedClientLink>
-                  </div>
+                  <div className="flex items-center h-full   pb-4">
+  <LocalizedClientLink
+    href="/"
+    className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
+    data-testid="nav-store-link"
+  >
+    <img
+      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
+      alt="Site Logo"
+      className="h-10 transition-transform duration-300"
+    />
+  </LocalizedClientLink>
+</div>
+
+
 
                   <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
                     <div className="hidden small:flex items-center gap-x-6 h-full">
                       {process.env.FEATURE_SEARCH_ENABLED && (
                         <LocalizedClientLink
-                          className="hover:text-ui-fg-base"
+                          className="hover:text-yellow-500 transition-colors duration-300"
                           href="/search"
                           scroll={false}
                         >
@@ -85,7 +97,7 @@ export default async function Nav() {
                         </LocalizedClientLink>
                       )}
                       <LocalizedClientLink
-                        className="hover:text-ui-fg-base poppins"
+                        className="hover:text-yellow-500 transition-colors duration-300 poppins"
                         href="/account"
                       >
                         Account
@@ -94,7 +106,7 @@ export default async function Nav() {
                     <Suspense
                       fallback={
                         <LocalizedClientLink
-                          className="hover:text-ui-fg-base poppins flex gap-2"
+                          className="hover:text-yellow-500 transition-colors duration-300 poppins flex gap-2"
                           href="/cart"
                         >
                           Cart (0)
@@ -110,7 +122,6 @@ export default async function Nav() {
 
             <div className="sm:flex hidden justify-center items-center bg-[#000] pt-[10px] pb-[10px] poppins">
               <MegaMenu Arr={Arr} />
-              {/* <img src=""/> */}
             </div>
           </div>
         </nav>
