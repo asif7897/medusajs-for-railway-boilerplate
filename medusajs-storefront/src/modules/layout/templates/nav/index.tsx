@@ -69,21 +69,19 @@ export default async function Nav() {
                   </div>
                   
 
-                  <div className="flex items-center h-full   pb-4">
-  <LocalizedClientLink
-    href="/"
-    className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
-    data-testid="nav-store-link"
-  >
-    <img
-      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
-      alt="Site Logo"
-      className="h-10 transition-transform duration-300"
-    />
-  </LocalizedClientLink>
-</div>
-
-
+                  <div className="flex items-center h-full pb-4">
+      <LocalizedClientLink
+        href="/"
+        className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
+        data-testid="nav-store-link"
+      >
+        <img
+          src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
+          alt="Site Logo"
+          className="h-8 sm:h-10 md:h-12 lg:h-14 transition-transform duration-300"
+        />
+      </LocalizedClientLink>
+    </div>
 
                   <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
                     <div className="hidden small:flex items-center gap-x-6 h-full">
