@@ -69,7 +69,7 @@ export default async function Nav() {
                   </div>
                   
 
-                  <div className="flex items-center h-full pb-4">
+                  <div className="flex items-center h-full my-2 -mt-2">
       <LocalizedClientLink
         href="/"
         className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
