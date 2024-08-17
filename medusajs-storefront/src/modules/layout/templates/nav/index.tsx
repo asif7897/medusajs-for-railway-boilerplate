@@ -54,59 +54,63 @@ export default async function Nav() {
       <header className="relative mx-auto duration-200 bg-black pt-5">
         <nav className="txt-xsmall-plus text-white font-bold flex items-center justify-between w-full h-full text-large-regular">
           <div className="flex flex-col w-full">
-
-<div className="content-container w-full h-12 items-center flex border-b border-gray-800 transition-all duration-500 hover:border-gray-500">
-              {/* White line here */}
-              <div className="flex flex-col w-full">
-                <div className="flex justify-between items-center w-full">
-                  <div className="flex-1 basis-0 h-full flex items-center">
-                    <div className="h-full">
-                      <SideMenu regions={regions} />
+            {/* Content container */}
+            <div className="relative flex flex-col w-full">
+              {/* Border line */}
+              <div className="absolute bottom-0 left-0 w-full border-b border-gray-800 transition-all duration-500 hover:border-gray-500"></div>
+              {/* Inner content */}
+              <div className="flex items-center h-12 relative mx-4">
+                <div className="flex flex-col w-full">
+                  <div className="flex justify-between items-center w-full">  
+                    <div className="flex-1 basis-0 h-full flex items-center">
+                      <div className="h-full">
+                        <SideMenu regions={regions} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center h-full my-2 -mt-2">
-                    <LocalizedClientLink
-                      href="/"
-                      className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
-                      data-testid="nav-store-link"
-                    >
-                      <img
-                        src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
-                        alt="Site Logo"
-                        className="h-6 sm:h-8 md:h-10 lg:h-12 transition-transform duration-300"
-                      />
-                    </LocalizedClientLink>
-                  </div>
-                  <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-                    <div className="hidden small:flex items-center gap-x-6 h-full">
-                      {process.env.FEATURE_SEARCH_ENABLED && (
-                        <LocalizedClientLink
-                          className="hover:text-yellow-500 transition-colors duration-300"
-                          href="/search"
-                          scroll={false}
-                        >
-                          Search
-                        </LocalizedClientLink>
-                      )}
+                    <div className="flex items-center h-full my-2 -mt-2">
                       <LocalizedClientLink
-                        className="hover:text-yellow-500 transition-colors duration-300 poppins"
-                        href="/account"
+                        href="/"
+                        className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
+                        data-testid="nav-store-link"
                       >
-                        Account
+                        <img
+                          src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
+                          alt="Site Logo"
+                          className="h-6 sm:h-8 md:h-10 lg:h-12 transition-transform duration-300"
+                        />
                       </LocalizedClientLink>
                     </div>
-                    <Suspense
-                      fallback={
+                    <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end mx-4">
+                      <div className="hidden small:flex items-center gap-x-6 h-full ">
+                        {process.env.FEATURE_SEARCH_ENABLED && (
+                          <LocalizedClientLink
+                            className="hover:text-yellow-500 transition-colors duration-300"
+                            href="/search"
+                            scroll={false}
+                          >
+                            Search
+                          </LocalizedClientLink>
+                        )}
                         <LocalizedClientLink
-                          className="hover:text-yellow-500 transition-colors duration-300 poppins flex gap-2"
-                          href="/cart"
+                          className="hover:text-yellow-500 transition-colors duration-300 poppins"
+                          href="/account"
                         >
-                          Cart (0)
+                          Account
                         </LocalizedClientLink>
-                      }
-                    >
-                      <CartButton />
-                    </Suspense>
+                      </div>
+                      <Suspense
+                        fallback={
+                          <LocalizedClientLink
+                            className="hover:text-yellow-500 transition-colors duration-300 poppins flex gap-2"
+                            href="/cart"
+                          >
+                            Cart (0)
+                          </LocalizedClientLink>
+                        }
+                      >
+                        <CartButton />
+                      </Suspense>
+                    </div>
                   </div>
                 </div>
               </div>
