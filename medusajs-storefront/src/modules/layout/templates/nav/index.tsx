@@ -78,7 +78,7 @@ export default async function Nav() {
         <img
           src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
           alt="Site Logo"
-          className="h-8 sm:h-10 md:h-12 lg:h-14 transition-transform duration-300"
+           className="h-6 sm:h-8 md:h-10 lg:h-12 transition-transform duration-300"
         />
       </LocalizedClientLink>
     </div>
