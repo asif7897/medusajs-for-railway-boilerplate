@@ -9,7 +9,7 @@ export const Address = [
                 floor: "2nd floor",
                 mobile: "+8801723657678",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/pAKFawAW3a6pjhhZA"
+                shopUrl: "https://maps.app.goo.gl/5H2RxM38kykNSwUA9"
             },
             {
                 address: "72/14 Mansur Bhaban, New Elephant Road, Dhaka-1205",
