@@ -18,7 +18,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801834799298",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/mansur-bhaban"
+                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
             },
             {
                 address: "72 Mansur Bhaban (First Floor), New Elephant Road, Dhaka-1205",
@@ -27,7 +27,7 @@ export const Address = [
                 floor: "First Floor",
                 mobile: "+8801831876600",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/mansur-bhaban-first-floor"
+                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
             },
             {
                 address: "54 Minita Plaza, New Elephant Road, Dhaka-1205",
@@ -36,7 +36,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801849779559",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/minita-plaza"
+                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
             },
             {
                 address: "Bashundhara City Shopping Center Level-3, Block-D Shop-37, Panthapath, Dhaka",
@@ -45,7 +45,7 @@ export const Address = [
                 floor: "Level-3",
                 mobile: "+8801874646056",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/bashundhara-city-shopping-center"
+                shopUrl: "https://maps.app.goo.gl/erWhjFFzTSAMx67y5"
             },
             {
                 address: "Fortune Shopping Center, Shop #39-40-40a, Mouchak Circle, Dhaka",
@@ -54,7 +54,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801824188715",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/fortune-shopping-center"
+                shopUrl: "https://maps.app.goo.gl/GrjuzDntQKZ4GhsS9"
             }
         ]
     },
@@ -68,7 +68,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801834939993",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/iszWhXAzSV3hzWPc9"
+                shopUrl: "https://maps.app.goo.gl/mzM9e3Vd1rvqC8QYA"
             }
         ]
     },
@@ -82,7 +82,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801601219918",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/isra-plaza-2"
+                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
             }
         ]
     },
@@ -96,7 +96,7 @@ export const Address = [
                 floor: "1st floor",
                 mobile: "+8801733552270",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/zila-parishad-market"
+                shopUrl: "https://maps.app.goo.gl/LGuRBCBhCu3PAEC29"
             }
         ]
     },
@@ -124,7 +124,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801824189230",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/majid-sarani"
+                shopUrl: "https://maps.app.goo.gl/jvcricm2baBAqQZu5"
             }
         ]
     }
