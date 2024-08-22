@@ -148,14 +148,14 @@ body {
 }
 
 .category-card-1 {
-  background: url('../../public/assets/C-card-2.jpg');
+  background: url('../../public/assets/C-card-2.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .category-card-2 {
-  background: url('../../public/assets/C-card-1.jpg');
+  background: url('../../public/assets/C-card-1.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
