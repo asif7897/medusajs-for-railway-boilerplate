@@ -131,7 +131,7 @@ export default async function Home({
   <div className="image-container flex items-center justify-center relative w-full h-full">
     <img
       className="object-cover object-fit h-full w-full lg:h-[95vh] md:h-[80vh] transition-transform duration-500 ease-in-out transform hover:scale-105"
-      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp"
+      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359760/Gift_Card_Banner_21-01_zzddwf.webp"
       alt="Gift Card Image"
     />
     <div className="blur-overlay absolute inset-0 bg-gray-900 opacity-50 z-10"></div>
