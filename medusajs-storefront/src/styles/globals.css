@@ -148,19 +148,18 @@ body {
 }
 
 .category-card-1 {
-  background: url('https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp');
+  background: url('../../public/assets/C-card-2.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .category-card-2 {
-  background: url('https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359769/Belt_Banner_e49irb.webp');
+  background: url('../../public/assets/C-card-1.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 
 .product-1 {
