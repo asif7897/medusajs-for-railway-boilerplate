@@ -99,7 +99,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
         return (
           <>
             <CustomButton text="SHOP MEN" href="/collections/premium_suit" />
-            <CustomButton text="SHOP WOMEN" href="/collections/womens_suit" />
+            <CustomButton text="SHOP WOMEN" href="/collections/women's_suit" />
           </>
         );
       case 1:
