@@ -1,82 +1,63 @@
-"use client"
+"use client"; // This line makes the component a client component
+
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
 import { Button } from 'Components/Reusable-Modules/buttons';
 import Link from 'next/link';
 
-
 interface CarouselProps {
   images?: string[];
-  auto?: boolean; // Optional prop for automatic slide change
-  interval?: number; // Optional prop for interval between slides
+  auto?: boolean;
+  interval?: number;
 }
 
-
-
-const Button_custom = ({
+const CustomButton = ({
   text,
-  onClick,
+  href,
 }: {
   text: string;
-  onClick?: () => void;
+  href: string;
 }) => {
   return (
-    <Link href="/collections/premium_suit" passHref>
+    <Link href={href} passHref>
       <Button
-        bgColor="gray"
-        color="#fff"  // Set text color to white
-        borderRadius="5px"
-        className="font-[500] text-[16px] bg-gray-500 border-2 border-gray-500 hover:bg-black hover:border-black hover:text-white transition-colors duration-300"
-        onClick={onClick}
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Initial transparent white background
+          borderColor: 'rgba(255, 255, 255, 0.3)', // Initial light gray border
+          color: '#ffffff', // White text
+          borderRadius: '5px',
+          fontWeight: 500,
+          fontSize: '16px',
+          transition: 'all 0.3s ease', // Smooth transition for all properties
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow effect
+          backdropFilter: 'blur(10px)', // Glass-like effect
+        }}
+        className="border-2 hover:bg-[rgba(255, 255, 255, 0.3)] hover:border-[rgba(255, 255, 255, 0.5)] hover:scale-105 hover:shadow-lg"
       >
         {text}
       </Button>
     </Link>
   );
 };
-
-
-const Button_custom2 = ({
-  text,
-  onClick,
-}: {
-  text: string;
-  onClick?: () => void;
-}) => {
-  return (
-    <Link href="/collections/premium_suit" passHref>
-      <Button
-        bgColor="gray"
-        color="#fff"  // Set text color to white
-        borderRadius="5px"
-        className="font-[500] text-[16px] bg-gray-500 border-2 border-gray-500 hover:bg-black hover:border-black hover:text-white transition-colors duration-300"
-        onClick={onClick}
-      >
-        {text}
-      </Button>
-    </Link>
-  );
-};
-
-
 
 
 
 const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [widthIs, setWidthIs] = useState<any>(665)
+  const [widthIs, setWidthIs] = useState<number>(665);
 
-  const images: string[] = widthIs < 650 ?
-    [
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/2.2_c4cttl.webp",
-      "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp"
-    ] :
-    [
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/3_uqfulu.webp',
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1_mbtjqq.webp',
-      'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/2_tzhqd0.webp',
-    ];
+  const images: string[] = widthIs < 650
+    ? [
+        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",
+        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/2.2_c4cttl.webp",
+        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp"
+      ]
+    : [
+        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/3_uqfulu.webp',
+        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1_mbtjqq.webp',
+        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/2_tzhqd0.webp',
+      ];
+
   useEffect(() => {
     if (auto) {
       const intervalId = setInterval(goToNext, interval);
@@ -85,20 +66,19 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   }, [currentIndex, auto, interval]);
 
   const getWidth = () => {
-    if (typeof window !== 'undefined' && window) {
-      setWidthIs(window.screen.width)
+    if (typeof window !== 'undefined') {
+      setWidthIs(window.screen.width);
     }
-  }
-
+  };
 
   useEffect(() => {
-    getWidth()
-    addEventListener('resize', getWidth)
+    getWidth();
+    window.addEventListener('resize', getWidth);
     return () => {
-      removeEventListener('resize', getWidth)
-    }
+      window.removeEventListener('resize', getWidth);
+    };
+  }, []);
 
-  }, [typeof window !== 'undefined' && window])
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
@@ -113,32 +93,42 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     setCurrentIndex(newIndex);
   };
 
-  // if (widthIs < 650) {
-  //   return (
-  //     <div className={styles.carousel}>
-  //       <img
-  //         src="https://cdn.sanity.io/images/tgi56uf8/production/472558e1489a73991716c1e3e490087790322164-1400x1600.jpg?auto=format&fit=max&q=75&w=700" />
-  //     </div>
-  //   )
-  // } else {
-
+  const renderButtons = () => {
+    switch (currentIndex) {
+      case 0:
+        return (
+          <>
+            <CustomButton text="SHOP MEN" href="/collections/premium_suit" />
+            <CustomButton text="SHOP WOMEN" href="/collections/womens_suit" />
+          </>
+        );
+      case 1:
+        return (
+          <>
+            <CustomButton text="SHOP TIE" href="/collections/box_tie" />
+            <CustomButton text="SHOP BELT" href="/collections/luxury_belt" />
+          </>
+         
+        );
+      case 2:
+        return (
+          <>
+           <CustomButton text="SHOP NOW" href="/collections/elite_panjabi" />
+           
+          </>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
-
     <div className={styles.carousel}>
-
-
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
-            <div className='flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins' style={{
-              bottom:"30px",
-              left:"30px"
-            }} >
-
-              <Button_custom text='Shop Men' onClick={() => { }} />
-              <Button_custom2 text='Shop Women' onClick={() => { }} />
-
+            <div className="flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins" style={{ bottom: "30px", left: "30px" }}>
+              {renderButtons()}
             </div>
             <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
           </div>
@@ -156,8 +146,6 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       </div>
     </div>
   );
-
-  // }
-}
+};
 
 export default Carousel;
