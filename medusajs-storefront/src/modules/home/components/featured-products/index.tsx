@@ -2,7 +2,6 @@ import React from 'react';
 import '../featured-products/product-rail/style.css'; // Path to your CSS file
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 
-// Define types for the props (Replace `any` with actual types if known)
 interface FeaturedProductsProps {
   collections: any; // Replace `any` with the actual type of collections
   region: any; // Replace `any` with the actual type of region
@@ -13,6 +12,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region
 
   return (
     <div
+      className="featured-products-wrapper"
       style={{
         backgroundImage: `url(${backgroundImageSrc})`,
         backgroundPosition: "center",
@@ -21,16 +21,14 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region
         width: "100vw",
         height: "100vh",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
+        alignItems: "flex-end",  // Aligns content to the bottom
+        justifyContent: "flex-end",  // Aligns content to the right
+        padding: "20px",  // Adds some padding from the edges
       }}
-      className='max-w-[100%]'
     >
-      <h1 style={{ fontSize: 50, color: "white", marginBottom: "20px" }}>Women Premium Suit</h1>
       <div className="buttonLinkWrapper">
         <LocalizedClientLink href="/collections/suit_w">
-          <span style={{ fontSize: 50, color: "white", marginBottom: "20px" }}>shop now </span>
+          <span className="featured-products-link">Women wear</span>
         </LocalizedClientLink>
       </div>
     </div>

@@ -1,26 +1,64 @@
-
-.buttonLinkWrapper {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background-color: #000;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(168, 28, 28, 0.3);
-    transition: background-color 0.3s ease;
-    position: relative; /* Make sure to have a relative position for pseudo-elements */
+/* Wrapper for the featured products section */
+.featured-products-wrapper {
+    background-image: url('https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
 }
 
-.buttonLinkWrapper::after {
-    content: none; /* Remove the content if it's used for the arrow */
-    background: none; /* Remove any background image or arrow */
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .featured-products-wrapper {
+        height: 70vh; /* Reduces the height on mobile devices */
+        background-position: top center; /* Adjust position for mobile */
+        background-size: contain; /* Ensure the entire image fits within the viewport */
+    }
+}
+
+/* Wrapper for the button with updated design */
+.buttonLinkWrapper {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    border: 3px solid white; /* White border around the button */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+    position: relative;
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 30px; /* Adds distance from the right edge */
+    margin-bottom: 30px; /* Adds distance from the bottom edge */
+}
+
+.buttonLinkWrapper:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
 }
 
 .buttonLinkWrapper a {
-    color: inherit; /* Make sure the link inherits the color */
-    text-decoration: none; /* Remove underline from link */
-    display: block; /* Ensure the link is block-level for padding */
-    height: 100%; /* Ensure the link takes the full height of the wrapper */
-    width: 100%; /* Ensure the link takes the full width of the wrapper */
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .buttonLinkWrapper {
+        font-size: 18px; /* Adjust font size for mobile */
+        padding: 10px 20px; /* Adjust padding for mobile */
+        margin-right: 15px; /* Adjust right margin for mobile */
+        margin-bottom: 15px; /* Adjust bottom margin for mobile */
+    }
 }
