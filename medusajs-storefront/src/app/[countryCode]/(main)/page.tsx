@@ -118,17 +118,15 @@ export default async function Home({
 
 
      
-      <section className="pb-7 pt-10 space-y-1">
+   <section className="pb-7 pt-10 space-y-1 px-4 md:px-8">
   <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold">
     ACCESSORIES
   </h2>
-  <div className="flex flex-col md:flex-row justify-start items-start h-[95vh] md:h-[80vh]">
+  <div className="flex flex-col space-x-4 md:flex-row justify-start items-start h-[95vh] md:h-[80vh]">
     <a href="/collections/luxury_belt" className="w-full md:w-1/2 h-full category-card-1 block">
-      
-    </a>
+      </a>
     <a href="/collections/box_tie" className="w-full md:w-1/2 h-full category-card-2 block">
-      
-    </a>
+      </a>
   </div>
 </section>
 
