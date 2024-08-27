@@ -27,7 +27,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region
       }}
     >
       <div className="buttonLinkWrapper">
-        <LocalizedClientLink href="/collections/suit_w">
+        <LocalizedClientLink href="/collections/women's_suit">
           <span className="featured-products-link">Women wear</span>
         </LocalizedClientLink>
       </div>
