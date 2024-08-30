@@ -6,7 +6,7 @@ const Privacy = () => {
         <>
             <div className="flex py-8 px-6 flex-col gap-y-[30px]">
                 <div className="flex flex-col pb-[35px]" >
-                    <h1 className="text-[35px] leading-[1.2] text-[#000] font-[600] poppins">Our Story</h1>
+                    <h1 className="text-[35px] leading-[1.2] text-[#000] font-[600] poppins">Privacy And Policy</h1>
                 </div>
                 <div className="flex flex-wrap gap-y-[20px]">
                     {About_Us_List.map((item, index) => {
