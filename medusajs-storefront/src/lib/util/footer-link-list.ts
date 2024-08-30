@@ -6,5 +6,9 @@ export const Routes = [
     {
         "text": "Shop Address",
         "link": "/shop-address"
+    } ,
+    {
+        "text": "Privacy Policies",
+        "link": "/privacy"
     } 
 ]
