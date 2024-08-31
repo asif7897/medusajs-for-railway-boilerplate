@@ -54,7 +54,9 @@ export default async function Footer() {
                 })}
               </ul>
             </div>
-           
+
+
+          {/**     
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
@@ -82,7 +84,8 @@ export default async function Footer() {
               </div>
             )}
 
-
+        */}
+           
 
 <div className="flex flex-col gap-y-2">
   <span className="txt-small-plus txt-ui-fg-base">SEA SKY</span>
