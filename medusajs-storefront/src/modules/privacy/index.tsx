@@ -1,4 +1,4 @@
-import { About_Us_List } from '@lib/util/about-us-list'
+import { Privacy_List } from '@lib/util/privacy'
 import React from 'react'
 
 const Privacy = () => {
@@ -9,7 +9,7 @@ const Privacy = () => {
                     <h1 className="text-[35px] leading-[1.2] text-[#000] font-[600] poppins">Privacy And Policy</h1>
                 </div>
                 <div className="flex flex-wrap gap-y-[20px]">
-                    {About_Us_List.map((item, index) => {
+                    {Privacy_List.map((item, index) => {
                         const brand = 'Sea Sky'
                         const parts = item.split(new RegExp(`(${brand})`, 'gi'));
                         return (

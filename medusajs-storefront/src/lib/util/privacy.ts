@@ -1,4 +1,4 @@
-const Privacy_list = [
+const Privacy_List = [
     "eWelcome to Sea Sky, your ultimate destination for ocean-inspired treasures and coastal living. Founded with a passion for the sea and a love for quality craftsmanship, Sea Sky is dedicated to bringing the beauty, tranquility, and inspiration of the ocean into your home and lifestyle.",
     "Our journey began with a simple idea: to create a place where ocean lovers can find unique, high-quality products that reflect their love for the sea. Whether you're a beachcomber, a sailor, or simply someone who finds peace in the sound of the waves, we have something special for you.",
     "At Sea Sky, we meticulously curate a diverse collection of items that embody the spirit of the ocean. From elegant home decor and stylish apparel to exquisite jewelry and thoughtful gifts, every piece in our collection is chosen for its quality, design, and ability to evoke the serene beauty of coastal living. Our products are sourced from talented artisans and trusted suppliers who share our commitment to excellence and sustainability.",
@@ -7,4 +7,4 @@ const Privacy_list = [
     "Thank you for choosing Sea Sky. We invite you to explore our collection and find the perfect items to celebrate your love for the ocean. Dive in and let the sea's beauty inspire you every day."
 ]
 
-export { Privacy_list }
+export { Privacy_List }
