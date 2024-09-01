@@ -1,9 +1,6 @@
 const About_Us_List = [
-    "Welcome to Sea Sky, your ultimate destination for ocean-inspired treasures and coastal living. Founded with a passion for the sea and a love for quality craftsmanship, Sea Sky is dedicated to bringing the beauty, tranquility, and inspiration of the ocean into your home and lifestyle.",
-    "Our journey began with a simple idea: to create a place where ocean lovers can find unique, high-quality products that reflect their love for the sea. Whether you're a beachcomber, a sailor, or simply someone who finds peace in the sound of the waves, we have something special for you.",
-    "At Sea Sky, we meticulously curate a diverse collection of items that embody the spirit of the ocean. From elegant home decor and stylish apparel to exquisite jewelry and thoughtful gifts, every piece in our collection is chosen for its quality, design, and ability to evoke the serene beauty of coastal living. Our products are sourced from talented artisans and trusted suppliers who share our commitment to excellence and sustainability.",
-    "We believe in the power of community and the importance of giving back. That's why a portion of our profits goes to marine conservation efforts and organizations dedicated to protecting our oceans and marine life. By shopping with Sea Sky, you're not just bringing a piece of the ocean into your life; you're also contributing to the preservation of our planet's most precious resource.",
-    "Customer satisfaction is at the heart of everything we do. Our dedicated team is here to ensure you have a seamless and enjoyable shopping experience. From the moment you browse our website to the time your order arrives at your doorstep, we are committed to providing exceptional service and support.",
+     
+ 
     "Thank you for choosing Sea Sky. We invite you to explore our collection and find the perfect items to celebrate your love for the ocean. Dive in and let the sea's beauty inspire you every day."
 ]
 
