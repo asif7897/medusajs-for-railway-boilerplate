@@ -1,60 +1,106 @@
+/* Ensure carousel list and track take full height */
 .react-multi-carousel-list {
     height: 100%;
-    padding-top: 40px;
+    padding-top: 0; /* Remove top padding for better alignment */
 }
 
 .react-multi-carousel-track {
     height: 100%;
 }
 
-.slide_image {
-    background-size: cover !important;
-}
-
+/* Container for the slide item */
 .react-multi-carousel-item {
-    padding: 10px 15px;
+    padding: 5px; /* Reduced padding for better responsiveness */
+    position: relative; /* Ensure the text can be positioned absolutely */
 }
 
+/* Style for slide images */
+.slide_image {
+    position: relative;
+    overflow: hidden; /* Prevents zoom effect from causing overflow */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Image styling with zoom effect */
+.slide_image img {
+    width: 100%; /* Ensure image covers container */
+    height: 100%; /* Ensure image covers container */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    transition: transform 0.3s ease; /* Smoother zoom effect */
+}
+
+.slide_image:hover img {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Styling for caption overlay */
 .caption_ {
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.537), transparent);
+    position: absolute; /* Position it over the image */
+    bottom: 0; /* Position at the bottom of the image */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 20px;
+    align-items: center;
+    z-index: 2; /* Ensure it stays above the zoomed image */
 }
 
+/* Caption hover effect */
 .caption_:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
 }
 
+/* Styling for caption text */
 .caption_ p {
-    font-size: 24px;
+    font-size: 24px; /* Adjusted font size for responsiveness */
+    font-weight: bold; /* Make text bold */
     color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+    text-align: center; /* Center text for better readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Black shadow with some blur */
 }
 
+/* Arrow styling for the carousel */
 .react-multiple-carousel__arrow {
     background-color: rgba(0, 0, 0, 0.459);
-    width: 50px;
-    height: 100px;
+    width: 40px; /* Adjusted size for better visibility */
+    height: 70px; /* Adjusted size for better visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Arrow hover effect */
+.react-multiple-carousel__arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 .react-multiple-carousel__arrow--right {
-    right: calc(3%)
+    right: 3%;
 }
 
 .react-multiple-carousel__arrow--left {
-    left: calc(3%)
+    left: 3%;
 }
 
-
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .react-multiple-carousel__arrow {
+        width: 30px; /* Smaller arrows on tablets */
+        height: 60px; /* Smaller arrows on tablets */
+    }
+}
 
 @media only screen and (max-width: 550px) {
     .react-multiple-carousel__arrow {
-        width: 20px;
-        height: 75px;
+        width: 20px; /* Even smaller arrows on phones */
+        height: 50px; /* Even smaller arrows on phones */
     }
-    .react-multi-carousel-item{
-        padding: 5px 5px;
+
+    .caption_ p {
+        font-size: 20px; /* Further adjust font size for smaller screens */
     }
 }
