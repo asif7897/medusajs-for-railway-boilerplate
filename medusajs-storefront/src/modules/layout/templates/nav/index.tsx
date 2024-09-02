@@ -67,19 +67,25 @@ export default async function Nav() {
                         <SideMenu regions={regions} />
                       </div>
                     </div>
-                    <div className="flex items-center h-full my-2 -mt-2">
-                      <LocalizedClientLink
-                        href="/"
-                        className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
-                        data-testid="nav-store-link"
-                      >
-                        <img
-                          src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
-                          alt="Site Logo"
-                          className="h-6 sm:h-8 md:h-10 lg:h-12 transition-transform duration-300"
-                        />
-                      </LocalizedClientLink>
-                    </div>
+
+
+                   <div className="flex items-center h-full my-2 -mt-2">
+  <LocalizedClientLink
+    href="/"
+    className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
+    data-testid="nav-store-link"
+  >
+    <img
+      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
+      alt="sea sky"
+      className="h-4 sm:h-5 md:h-6 lg:h-8 transition-transform duration-300"
+    />
+  </LocalizedClientLink>
+</div>
+
+
+
+
                     <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end mx-4">
                       <div className="hidden small:flex items-center gap-x-6 h-full ">
                         {process.env.FEATURE_SEARCH_ENABLED && (
