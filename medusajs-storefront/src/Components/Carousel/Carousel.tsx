@@ -1,4 +1,4 @@
-"use client"; // This line makes the component a client component
+'use client'; // This line makes the component a client component
 
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
@@ -40,11 +40,10 @@ const CustomButton = ({
   );
 };
 
-
-
 const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [widthIs, setWidthIs] = useState<number>(665);
+  const [showButtons, setShowButtons] = useState<boolean>(false);
 
   const images: string[] = widthIs < 650
     ? [
@@ -67,7 +66,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const getWidth = () => {
     if (typeof window !== 'undefined') {
-      setWidthIs(window.screen.width);
+      setWidthIs(window.innerWidth); // Use innerWidth for better accuracy
     }
   };
 
@@ -76,6 +75,21 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     window.addEventListener('resize', getWidth);
     return () => {
       window.removeEventListener('resize', getWidth);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) { // Adjust scroll position as needed
+        setShowButtons(true);
+      } else {
+        setShowButtons(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -108,13 +122,11 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
             <CustomButton text="SHOP TIE" href="/collections/box_tie" />
             <CustomButton text="SHOP BELT" href="/collections/luxury_belt" />
           </>
-         
         );
       case 2:
         return (
           <>
            <CustomButton text="SHOP NOW" href="/collections/elite_panjabi" />
-           
           </>
         );
       default:
@@ -127,13 +139,25 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       <div className={styles.carouselSlide}>
         {images.map((image, index) => (
           <div key={index} className={`${styles.slide} ${index === currentIndex ? styles.activeSlide : styles.hiddenSlide}`}>
-            <div className="flex justify-center gap-[20px] absolute bottom-[50px] left-[50px] poppins" style={{ bottom: "30px", left: "30px" }}>
+            <div className={`${styles.buttonContainer} ${showButtons ? styles.show : ''}`}>
               {renderButtons()}
             </div>
             <img src={image} alt={`Slide ${index}`} className={styles.carouselImage} />
           </div>
         ))}
       </div>
+      <button
+        className={`${styles.carouselButton} ${styles.carouselButtonLeft} ${showButtons ? styles.show : ''}`}
+        onClick={goToPrevious}
+      >
+        &#9664;
+      </button>
+      <button
+        className={`${styles.carouselButton} ${styles.carouselButtonRight} ${showButtons ? styles.show : ''}`}
+        onClick={goToNext}
+      >
+        &#9654;
+      </button>
       <div className={styles.navigationDots}>
         {images.map((_, index) => (
           <button

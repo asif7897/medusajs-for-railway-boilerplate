@@ -3,50 +3,21 @@
   width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 80vh;
-  /* Adjusted height */
+  height: 80vh; /* Adjust height for hero section */
 }
 
 .carouselSlide {
   display: flex;
-  background-color: rgba(166, 166, 166, 0.34);
-  /* transition: transform 0.4s ease-in-out; Smooth slide transition */
+  background-color: rgba(166, 166, 166, 0.34); /* Slight background color */
+  transition: transform 0.4s ease-in-out; /* Smooth slide transition */
   height: 100%;
   width: 100%;
 }
 
 .carouselImage {
   width: 100%;
-  max-width: 100%;
   height: 100%;
-  object-fit: cover;
-  /* Ensures images fill their container */
-}
-
-.carouselButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1;
-  transition: background-color 0.3s ease;
-  /* Smooth button hover effect */
-}
-
-.carouselButtonLeft {
-  left: 10px;
-}
-
-.carouselButtonRight {
-  right: 10px;
-}
-
-.carouselButton:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  object-fit: cover; /* Ensures images fill their container */
 }
 
 .slide {
@@ -54,12 +25,6 @@
   width: 100%;
   opacity: 1;
   transition: opacity 0.5s ease-in;
-}
-
-.slide img {
-  aspect-ratio: 1/1.15;
-  object-fit: cover;
-  object-position: top center;
 }
 
 .hiddenSlide {
@@ -77,7 +42,6 @@
   justify-content: center;
   position: absolute;
   bottom: 20px;
-  /* Adjusted position */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -90,15 +54,120 @@
   margin: 0 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Smooth dot hover effect */
 }
 
 .activeDot {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-@media only screen and (max-width: 650px) {
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* Remove background */
+  border: none;
+  color: white; /* White arrows */
+  font-size: 2rem; /* Default size */
+  width: 50px; /* Default width */
+  height: 50px; /* Default height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and shadow */
+  border-radius: 50%; /* Make button circular */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Very subtle shadow effect */
+}
+
+.carouselButtonLeft {
+  left: 10px;
+}
+
+.carouselButtonRight {
+  right: 10px;
+}
+
+.carouselButton:hover {
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter white on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly more noticeable shadow on hover */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.buttonContainer.show {
+  opacity: 1;
+}
+
+.buttonContainer.hide {
+  opacity: 0;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light gray border */
+  color: white; /* White text */
+  border-radius: 12px; /* Larger border radius for rounded corners */
+  font-weight: 600; /* Increased font weight */
+  font-size: 28px; /* Larger text size */
+  padding: 20px 40px; /* Larger padding for bigger buttons */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  backdrop-filter: blur(10px); /* Glass-like effect */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly more opaque background on hover */
+  border-color: rgba(255, 255, 255, 0.5); /* Slightly lighter border on hover */
+  transform: scale(1.1); /* Slightly larger button on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Lighter shadow on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
   .carousel {
-  max-height: 520px;
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  .carouselButton {
+    font-size: 1.5rem; /* Smaller arrows on smaller screens */
+    width: 40px;
+    height: 40px;
+    top: 55%; /* Move arrows slightly lower */
+  }
+
+  .button {
+    font-size: 24px; /* Slightly smaller text size for smaller screens */
+    padding: 16px 32px; /* Adjust padding for better button size */
+  }
+
+  .navigationDots {
+    display: none; /* Hide navigation dots on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 50vh; /* Further adjust height for very small screens */
+  }
+
+  .carouselButton {
+    font-size: 1.25rem; /* Even smaller arrows on very small screens */
+    width: 30px;
+    height: 30px;
+    top: 60%; /* Move arrows slightly lower for very small screens */
+  }
+
+  .button {
+    font-size: 20px; /* Smaller text size for very small screens */
+    padding: 12px 24px; /* Adjust padding for very small screens */
   }
 }
