@@ -1,3 +1,6 @@
+/* Importing the Bleu Marine font */
+@import url('https://fonts.googleapis.com/css2?family=Bleu+Marine:wght@400;700&display=swap');
+
 /* Ensure carousel list and track take full height */
 .react-multi-carousel-list {
     height: 100%;
@@ -34,34 +37,40 @@
     transform: scale(1.1); /* Zoom in effect */
 }
 
-/* Styling for caption overlay */
+/* Keep the caption visible at all times */
 .caption_ {
     position: absolute; /* Position it over the image */
     bottom: 0; /* Position at the bottom of the image */
     left: 0; /* Align to the left */
     width: 100%; /* Full width */
     padding: 10px;
-    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    background: transparent; /* No background initially */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
     z-index: 2; /* Ensure it stays above the zoomed image */
+    opacity: 1; /* Always visible */
 }
 
-/* Caption hover effect */
-.caption_:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+/* Change background and text color on hover */
+.slide_image:hover .caption_ {
+    background-color: rgba(64, 64, 64, 0.8); /* Dark gray background on hover */
 }
 
-/* Styling for caption text */
+.slide_image:hover .caption_ p {
+    color: #fff; /* White text color on hover */
+}
+
+/* Styling for caption text with Bleu Marine font */
 .caption_ p {
+    font-family: 'Bleu Marine', sans-serif; /* Apply the Bleu Marine font */
     font-size: 24px; /* Adjusted font size for responsiveness */
     font-weight: bold; /* Make text bold */
-    color: #fff;
+    color: #fff; /* White text initially */
     margin: 0;
     letter-spacing: 1px;
     text-align: center; /* Center text for better readability */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Black shadow with some blur */
 }
 
 /* Arrow styling for the carousel */
