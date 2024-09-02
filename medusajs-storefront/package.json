@@ -2,10 +2,10 @@
   "name": "medusa-next",
   "version": "1.0.3",
   "private": true,
-  "author": "Kasper Fabricius Kristensen <kasper@medusajs.com> & Victor Gerbrands <victor@medusajs.com> (https://www.medusajs.com)",
-  "description": "Next.js Starter to be used with Medusa server",
+  "author": "sea sky ltd",
+  "description": "sea sky",
   "keywords": [
-    "medusa-storefront"
+    "sea sky"
   ],
   "scripts": {
     "dev": "next dev -p 8000",
