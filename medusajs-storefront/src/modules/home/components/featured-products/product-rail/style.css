@@ -1,64 +1,75 @@
 /* Wrapper for the featured products section */
 .featured-products-wrapper {
-    background-image: url('https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp');
+    width: 100vw;
+    height: 100vh;
+    display: flex; /* Flexbox for aligning content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Ensures no scrollbars appear */
+    cursor: pointer; /* Sets pointer cursor on hover */
+    position: relative; /* Ensures child positioning is relative to this wrapper */
+}
+
+/* Flip card container */
+.flip-card {
+    perspective: 2000px; /* Increased perspective for a more pronounced 3D effect */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner flip card that handles the flip effect */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s; /* Smooth transition for the flip */
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* Hover effect to flip the card */
+.featured-products-wrapper:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flips the card on hover */
+}
+
+/* Front and back faces of the card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides back face when not flipped */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 20px;
+    display: flex; /* Center content within each face */
+    align-items: center;
+    justify-content: center;
+    border-radius: 0; /* No rounded corners for full-screen */
+    color: white;
+    font-size: 24px;
+    text-align: center;
 }
 
-/* Responsive styles for mobile */
+/* Style for the back face */
+.flip-card-back {
+    transform: rotateY(180deg); /* Initially positioned on the back */
+}
+
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
     .featured-products-wrapper {
-        height: 70vh; /* Reduces the height on mobile devices */
-        background-position: top center; /* Adjust position for mobile */
-        background-size: contain; /* Ensure the entire image fits within the viewport */
+        height: 70vh; /* Reduce height on mobile devices */
     }
-}
-
-/* Wrapper for the button with updated design */
-.buttonLinkWrapper {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
-    border: 3px solid white; /* White border around the button */
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
-    position: relative;
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-right: 30px; /* Adds distance from the right edge */
-    margin-bottom: 30px; /* Adds distance from the bottom edge */
-}
-
-.buttonLinkWrapper:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
-    transform: translateY(-3px); /* Subtle lift effect */
-}
-
-.buttonLinkWrapper a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .buttonLinkWrapper {
+    
+    .flip-card-inner {
+        transition: transform 0.6s; /* Faster transition for mobile */
+    }
+    
+    .flip-card-front,
+    .flip-card-back {
         font-size: 18px; /* Adjust font size for mobile */
-        padding: 10px 20px; /* Adjust padding for mobile */
-        margin-right: 15px; /* Adjust right margin for mobile */
-        margin-bottom: 15px; /* Adjust bottom margin for mobile */
     }
 }
