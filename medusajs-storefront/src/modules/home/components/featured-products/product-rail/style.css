@@ -8,68 +8,33 @@
     overflow: hidden; /* Ensures no scrollbars appear */
     cursor: pointer; /* Sets pointer cursor on hover */
     position: relative; /* Ensures child positioning is relative to this wrapper */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
 }
 
-/* Flip card container */
-.flip-card {
-    perspective: 2000px; /* Increased perspective for a more pronounced 3D effect */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.featured-products-wrapper:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
 }
 
-/* Inner flip card that handles the flip effect */
-.flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s; /* Smooth transition for the flip */
-    transform-style: preserve-3d;
-    position: relative;
-}
-
-/* Hover effect to flip the card */
-.featured-products-wrapper:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flips the card on hover */
-}
-
-/* Front and back faces of the card */
-.flip-card-front,
-.flip-card-back {
+/* Overlay for text */
+.text-overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hides back face when not flipped */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex; /* Center content within each face */
-    align-items: center;
-    justify-content: center;
-    border-radius: 0; /* No rounded corners for full-screen */
-    color: white;
-    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
     text-align: center;
+    color: white;
+    z-index: 1;
 }
 
-/* Style for the back face */
-.flip-card-back {
-    transform: rotateY(180deg); /* Initially positioned on the back */
+/* Styling for the text */
+.featured-products-text {
+    font-size: 2rem; /* Large text size */
+    font-weight: bold; /* Makes the text bold */
 }
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    .featured-products-wrapper {
-        height: 70vh; /* Reduce height on mobile devices */
-    }
-    
-    .flip-card-inner {
-        transition: transform 0.6s; /* Faster transition for mobile */
-    }
-    
-    .flip-card-front,
-    .flip-card-back {
-        font-size: 18px; /* Adjust font size for mobile */
+    .featured-products-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
     }
 }

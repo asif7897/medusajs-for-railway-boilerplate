@@ -1,42 +1,38 @@
-"use client"; // Add this line to indicate this is a Client Component
+"use client"; // Indicate this is a Client Component
 
 import React from 'react';
-import '../featured-products/product-rail/style.css'; // Path to your CSS file
+import '../featured-products/product-rail/style.css'; // Ensure this path is correct
 
 interface FeaturedProductsProps {
-  collections: any; // Replace `any` with the actual type of collections
-  region: any; // Replace `any` with the actual type of region
-  url?: string; // Optional URL for redirection (default: undefined)
+  collections: any; // Define proper types if possible
+  region: any; // Define proper types if possible
 }
 
-const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
-  collections,
-  region,
-  url = '/collections/women\'s_suit', // Default URL set here
-}) => {
-  const frontImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp';
-  const backImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724674876/3-%287%29_1724674874305.png';
-
-  const handleClick = () => {
-    window.location.href = url; // Redirects to the specified URL
-  };
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region }) => {
+  const backgroundImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp';
 
   return (
-    <div className="featured-products-wrapper" onClick={handleClick}>
-      <div className="flip-card">
-        <div className="flip-card-inner">
-          <div
-            className="flip-card-front"
-            style={{ backgroundImage: `url(${frontImageSrc})` }}
-          />
-          <div
-            className="flip-card-back"
-            style={{ backgroundImage: `url(${backImageSrc})` }}
-          />
-        </div>
+    <div
+      className="featured-products-wrapper"
+      style={{
+        backgroundImage: `url(${backgroundImageSrc})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",  // Center content vertically
+        justifyContent: "center",  // Center content horizontally
+        padding: "20px",  // Adds some padding from the edges
+        position: "relative", // Ensures text overlay is positioned correctly
+      }}
+    >
+      <div className="text-overlay">
+        <span className="featured-products-text">Women Wear</span>
       </div>
     </div>
   );
-};
+}
 
 export default FeaturedProducts;
