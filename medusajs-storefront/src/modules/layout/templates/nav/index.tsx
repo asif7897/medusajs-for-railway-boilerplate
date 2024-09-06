@@ -10,7 +10,7 @@ import MegaMenu from "Components/MegaMenu/MegaMenu";
 const imageUrls = {
   st1366: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723764992/1_cw6stl.webp',
   nf2535: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765350/448339000_470383098861849_8993076245366460543_n_1719565453121_1_jdlnh9.webp',
-  women1: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723766143/M2720-P3800_1723125820159_mq6rud.webp',
+  women1: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725652575/2-_5__1724674297156_eygily.webp',
   women2: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765541/M2726-P3800_1723126877702_o1mzrd.webp',
   acce1: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723765839/hgjkloyygfdg_rfmfxm.webp',
   acce2: 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723798009/B_TIE_1.2_pwiyhm.webp'
