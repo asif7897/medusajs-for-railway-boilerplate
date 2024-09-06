@@ -26,7 +26,7 @@ export default async function Nav() {
         { "name": "Premium Suit", "handle": "premium_suit" },
         { "name": "Platinum Blazer", "handle": "platinum_blazer" },
         { "name": "Formal Shirt", "handle": "formal_shirt" },
-        { "name": "Elite Panjabi", "handle": "elite_panjabi" },
+      //  { "name": "Elite Panjabi", "handle": "elite_panjabi" },
         { "name": "Half Coat", "handle": "half_coat" },
         { "name": "Formal Pant", "handle": "formal_pant" }
       ],

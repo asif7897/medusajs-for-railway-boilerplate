@@ -32,16 +32,20 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
             name: "PREMIUM SUIT",
             value: "premium_suit"
         },
-        {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379758/st1366_tiwmqi.jpg",
-            name: "PLATINUM BLAZER",
-            value: "platinum_blazer"
-        },
-        {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379503/PKC_6783copy_jfer1o.jpg",
-            name: "ELITE PANJABI",
-            value: "elite_panjabi"
-        },
+     //   {
+      //      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379758/st1366_tiwmqi.jpg",
+    //        name: "PLATINUM BLAZER",
+    //        value: "platinum_blazer"
+    //    },
+        
+
+        //    {
+       //      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379503/PKC_6783copy_jfer1o.jpg",
+      //      name: "ELITE PANJABI",
+     //       value: "elite_panjabi"
+    //    },
+
+
         {
             image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379885/09-05-2024product00376_1024x1024_2x_j7tk27.jpg",
             name: "FORMAL SHIRT",
