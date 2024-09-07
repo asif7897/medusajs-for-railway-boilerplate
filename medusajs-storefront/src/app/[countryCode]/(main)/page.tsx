@@ -130,11 +130,11 @@ export default async function Home({
     <a
       href="/collections/luxury_belt"
       className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg bg-gray-700 group"
-      style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359769/Belt_Banner_e49irb.webp")' }}
+      style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661119/belt_web_banner_oc3xke.webp")' }}
     >
       <img
         className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-        src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359769/Belt_Banner_e49irb.webp"
+        src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661119/belt_web_banner_oc3xke.webp"
         alt="Luxury Belt"
       />
       <img
@@ -156,11 +156,11 @@ export default async function Home({
     <a
       href="/collections/box_tie"
       className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg bg-gray-700 group"
-      style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp")' }}
+      style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp")' }}
     >
       <img
         className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-        src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp"
+        src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp"
         alt="Box Tie"
       />
       <img
