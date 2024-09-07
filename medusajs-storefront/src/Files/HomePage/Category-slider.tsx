@@ -47,6 +47,11 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
             name: "HALF COAT",
             value: "half_coat"
         },
+        {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661098/Blazer_mckp_bg_edit_pvykdi.webp",
+            name: "PLATINUM BLAZER",
+            value: "platinum_blazer"
+        },
     ];
     
 
