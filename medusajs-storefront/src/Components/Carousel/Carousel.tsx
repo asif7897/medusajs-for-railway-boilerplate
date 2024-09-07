@@ -47,9 +47,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const images: string[] = widthIs < 650
     ? [
-        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",
+        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",      
+        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp",
         "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/2.2_c4cttl.webp",
-        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp"
       ]
     : [
         'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/3_uqfulu.webp',
