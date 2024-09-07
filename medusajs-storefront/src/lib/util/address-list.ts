@@ -2,15 +2,7 @@ export const Address = [
     {
         city: "Dhaka",
         locations: [
-            {
-                address: "52 Jahir A/C market (2nd floor), New Elephant Road, Dhaka-1205",
-                building_name: "Jahir A/C market",
-                building_number: "52",
-                floor: "2nd floor",
-                mobile: "+8801723657678",
-                time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/5H2RxM38kykNSwUA9"
-            },
+          
             {
                 address: "72/14 Mansur Bhaban, New Elephant Road, Dhaka-1205",
                 building_name: "Mansur Bhaban",
@@ -27,16 +19,7 @@ export const Address = [
                 floor: "First Floor",
                 mobile: "+8801831876600",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
-            },
-            {
-                address: "54 Minita Plaza, New Elephant Road, Dhaka-1205",
-                building_name: "Minita Plaza",
-                building_number: "54",
-                floor: null,
-                mobile: "+8801849779559",
-                time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
+              //  shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
             },
             {
                 address: "Bashundhara City Shopping Center Level-3, Block-D Shop-37, Panthapath, Dhaka",
@@ -69,6 +52,15 @@ export const Address = [
                 mobile: "+8801834939993",
                 time: "11AM - 8PM (Wed-Mon)",
                 shopUrl: "https://maps.app.goo.gl/mzM9e3Vd1rvqC8QYA"
+            },
+            {
+                address: "52/4/A kumarpara Sylhet -3100",
+                building_name: null,
+                building_number: "52/4/A",
+                floor: null,
+                mobile: "+8801896-060270",
+                time: "11AM - 8PM (Wed-Mon)",
+                shopUrl: "https://maps.app.goo.gl/mzM9e3Vd1rvqC8QYA"
             }
         ]
     },
@@ -82,7 +74,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801601219918",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
+                shopUrl: "https://www.google.com/maps/place/M.+Saifur+Rahman+Road,+Maulvi+Bazar/@24.4902398,91.7655662,17z/data=!3m1!4b1!4m6!3m5!1s0x375174bdff220731:0x8c2e2eef422b3362!8m2!3d24.4902349!4d91.7681411!16s%2Fg%2F1wd3tdj6?hl=es&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
             }
         ]
     },
@@ -110,7 +102,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801825947575",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://yourwebsite.com/shop-details/jolessorytola"
+                shopUrl: "https://maps.app.goo.gl/4SVz2EBrWCm2acE18"
             }
         ]
     },
