@@ -28,40 +28,28 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
 
     const slides: Slide[] = [
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379189/PKC_7433copy_grcqfn.jpg",
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725662909/20240604_121624_1724569589034_hjeafp.webp",
             name: "PREMIUM SUIT",
             value: "premium_suit"
         },
-     //   {
-      //      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379758/st1366_tiwmqi.jpg",
-    //        name: "PLATINUM BLAZER",
-    //        value: "platinum_blazer"
-    //    },
-        
-
-        //    {
-       //      image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379503/PKC_6783copy_jfer1o.jpg",
-      //      name: "ELITE PANJABI",
-     //       value: "elite_panjabi"
-    //    },
-
-
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720379885/09-05-2024product00376_1024x1024_2x_j7tk27.jpg",
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661092/Shirt_bg_edit_ykxuim.webp",
             name: "FORMAL SHIRT",
             value: "formal_shirt"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380349/90_1010982-1A07978_1B000_10_WoolFormalPants-Clothing-Versace-online-store_1_3_x7zrpk.png",
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661097/Black_pant_nmh6os.webp",
             name: "FORMAL PANT",
             value: "formal_pant"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1720380496/A23WS0152363408_BLUE_vmxomo.jpg",
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725663151/1_1_vidbgp.webp",
             name: "HALF COAT",
             value: "half_coat"
         },
     ];
+    
+
     return (
         <>
             <div className="w-full pt-[40px]">
