@@ -107,32 +107,41 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     setCurrentIndex(newIndex);
   };
 
+
+
+
   const renderButtons = () => {
     switch (currentIndex) {
       case 0:
-        return (
-          <>
-            <CustomButton text="SHOP MEN" href="/collections/premium_suit" />
-            <CustomButton text="SHOP WOMEN" href="/collections/women's_suit" />
-          </>
-        );
-      case 1:
         return (
           <>
             <CustomButton text="SHOP TIE" href="/collections/box_tie" />
             <CustomButton text="SHOP BELT" href="/collections/luxury_belt" />
           </>
         );
+      case 1:
+        return (
+          <>
+            <CustomButton text="SHOP MEN" href="/collections/premium_suit" />
+            <CustomButton text="SHOP WOMEN" href="/collections/womens_suit" />
+          </>
+        );
       case 2:
         return (
           <>
-           <CustomButton text="SHOP NOW" href="/collections/elite_panjabi" />
+            <CustomButton text="SHOP NOW" href="/collections/elite_panjabi" />
           </>
         );
       default:
         return null;
     }
   };
+  
+
+
+
+
+
 
   return (
     <div className={styles.carousel}>
