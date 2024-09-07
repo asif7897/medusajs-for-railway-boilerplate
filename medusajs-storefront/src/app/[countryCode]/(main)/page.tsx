@@ -190,25 +190,29 @@ export default async function Home({
       </section>
 
       <section className="py-12 px-4 md:px-8">
-        <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-4">GIFT CARD</h2>
-        <div className="relative flex items-center justify-center w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden">
-          <img
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661059/Gift_card_web_banner_o178kb.webp"
-            alt="Gift Card"
-          />
-          <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 text-white p-4">
-            <h3 className="text-xl font-semibold mb-2">Get the Perfect Gift</h3>
-            <p className="text-lg mb-4">Our gift cards are perfect for any occasion.</p>
-            <a
-              href="/gift-card"
-              className="bg-white text-gray-800 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition duration-300"
-            >
-              Buy Now
-            </a>
-          </div>
-        </div>
-      </section>
+  <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-4 text-gray-700">GIFT CARD</h2>
+  <div className="relative flex items-center justify-center w-full h-[50vh] md:h-[70vh] bg-gray-200 rounded-lg overflow-hidden">
+    <img
+      className="absolute inset-0 w-full h-full object-cover"
+      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661059/Gift_card_web_banner_o178kb.webp"
+      alt="Gift Card"
+    />
+    <div className="relative z-10 flex flex-col items-end justify-center w-full h-full bg-opacity-10 text-white p-4 md:p-6">
+      <h3 className="text-lg md:text-xl font-semibold mb-2 text-right text-gray-300">Get the Perfect Gift</h3>
+      <p className="text-base mb-4 text-right text-gray-300">Our gift cards are perfect for any occasion.</p>
+      <a
+        href="/gift-card"
+        className="bg-white text-gray-800 py-2 px-4 rounded-lg text-right hover:bg-gray-300 hover:shadow-lg transition-colors duration-300"
+      >
+        Buy Now
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+       
     </>
   );
 }
