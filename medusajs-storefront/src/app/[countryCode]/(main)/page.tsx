@@ -193,7 +193,7 @@ export default async function Home({
     <div className="blur-overlay absolute inset-0 bg-gray-900 opacity-50 z-10"></div>
     <LocalizedClientLink href="/collections/gift_card">
     <span className="absolute bottom-4 right-4 text-center text-2xl lg:text-3xl font-semibold text-white z-20 bg-gray-800 bg-opacity-70 p-4 rounded-lg shadow-lg border-2 border-gray-300 transition-transform duration-300 hover:scale-105 hover:bg-gray-700">
-      GIFT CARD
+       SHOP NOW
     </span>
     </LocalizedClientLink>
   </div>
