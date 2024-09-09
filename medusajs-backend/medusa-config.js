@@ -38,6 +38,9 @@ const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY;
 const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET;
 const cloudinaryConfigured =
   CLOUDINARY_CLOUD_NAME && CLOUDINARY_API_KEY && CLOUDINARY_API_SECRET;
+  
+// Hardcoded Stripe test key
+const STRIPE_API_KEY = "sk_test_51PpIs9JC4w5EcnfnVabIakkNLeWDP22bgzKdLwlDd5M410MUsN6gUkCwNtMqDQvS2ZCWwRK9mDFBQYgtQKUh2uCb005xRI7vgd";
 
 const ADMIN_APP_PORT = process.env.PORT || 7001;
 
@@ -57,14 +60,14 @@ const fileServicePlugin = cloudinaryConfigured
         upload_dir: "uploads",
       },
     };
- 
+
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
     resolve: `medusa-payment-stripe`,
     options: {
-      api_key: process.env.STRIPE_API_KEY,
+      api_key: STRIPE_API_KEY,  // Using the hardcoded Stripe key here
       webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
     },
   },
