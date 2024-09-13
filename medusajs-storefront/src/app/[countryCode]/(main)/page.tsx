@@ -164,7 +164,7 @@ export default async function Home({
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723126267/RC-TIE-2.2_1723126266942.jpg"
+              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723909869/q31p_1723909869066.png"
               alt="Box Tie Hover"
             />
             <svg
@@ -189,30 +189,32 @@ export default async function Home({
         </div>
       </section>
 
-      <section className="py-12 px-4 md:px-8">
-  <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-4 text-gray-700">GIFT CARD</h2>
-  <div className="relative flex items-center justify-center w-full h-[50vh] md:h-[70vh] bg-gray-200 rounded-lg overflow-hidden">
-    <img
-      className="absolute inset-0 w-full h-full object-cover"
-      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661059/Gift_card_web_banner_o178kb.webp"
-      alt="Gift Card"
-    />
-    <div className="relative z-10 flex flex-col items-end justify-center w-full h-full bg-opacity-10 text-white p-4 md:p-6">
-      <h3 className="text-lg md:text-xl font-semibold mb-2 text-right text-gray-300">Get the Perfect Gift</h3>
-      <p className="text-base mb-4 text-right text-gray-300">Our gift cards are perfect for any occasion.</p>
-      <a
-        href="/gift-card"
-        className="bg-white text-gray-800 py-2 px-4 rounded-lg text-right hover:bg-gray-300 hover:shadow-lg transition-colors duration-300"
-      >
-        Buy Now
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-       
+      {/* Facebook Pixel Integration */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
+            fbq('track', 'PageView');
+          `,
+        }}
+      />
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
+          alt=""
+        />
+      </noscript>
     </>
   );
 }
