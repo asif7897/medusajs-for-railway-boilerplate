@@ -42,8 +42,9 @@ export default async function Nav() {
     {
       "main_category": "Accessory",
       "sub_categories": [
-        { "name": "Box-tie", "handle": "box_tie" },
-        { "name": "Luxury-belt", "handle": "luxury_belt" }
+        { "name": "Luxury-belt", "handle": "luxury_belt" },
+        { "name": "Box-tie", "handle": "box_tie" }
+       
       ],
       image: [imageUrls.acce1, imageUrls.acce2]
     }
