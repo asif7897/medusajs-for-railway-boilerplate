@@ -1,7 +1,5 @@
 import { Text } from "@medusajs/ui"
-
 import { ProductPreviewType } from "types/global"
-
 import { retrievePricedProductById } from "@lib/data"
 import { getProductPrice } from "@lib/util/get-product-price"
 import { Region } from "@medusajs/medusa"
@@ -43,10 +41,16 @@ export default async function ProductPreview({
           size="full"
           isFeatured={isFeatured}
         />
-        <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text className="text-ui-fg-subtle">{productPreview.title}</Text>
-          <div className="flex items-center gap-x-2">
-            {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+        <div className="flex flex-col mt-4 sm:flex-row sm:justify-between">
+          {/* Title and price stack vertically on mobile, side-by-side on larger screens */}
+          <div className="flex flex-col">
+            <Text className="text-ui-fg-subtle">{productPreview.title}</Text>
+            {/* Ensure price is below title on mobile */}
+            {cheapestPrice && (
+              <div className="mt-2 sm:mt-0">
+                <PreviewPrice price={cheapestPrice} />
+              </div>
+            )}
           </div>
         </div>
       </div>
