@@ -10,7 +10,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801834799298",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
+                shopUrl: "https://maps.app.goo.gl/tW3cPu7Zcw34svVV8"
             },
             {
                 address: "72 Mansur Bhaban (First Floor), New Elephant Road, Dhaka-1205",
@@ -19,7 +19,7 @@ export const Address = [
                 floor: "First Floor",
                 mobile: "+8801831876600",
                 time: "11AM - 8PM (Wed-Mon)",
-              //  shopUrl: "https://maps.app.goo.gl/your-google-maps-url"
+                shopUrl: "https://maps.app.goo.gl/B41zWiZuFfvZ13Hi9"
             },
             {
                 address: "Bashundhara City Shopping Center Level-3, Block-D Shop-37, Panthapath, Dhaka",
@@ -60,7 +60,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801896-060270",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/mzM9e3Vd1rvqC8QYA"
+                shopUrl: "https://maps.app.goo.gl/u7UJqZ16sqqtmyhm8"
             }
         ]
     },
