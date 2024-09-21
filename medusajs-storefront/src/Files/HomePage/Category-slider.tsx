@@ -33,6 +33,11 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
             value: "premium_suit"
         },
         {
+            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661098/Blazer_mckp_bg_edit_pvykdi.webp",
+            name: "PLATINUM BLAZER",
+            value: "platinum_blazer"
+        },
+        {
             image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661092/Shirt_bg_edit_ykxuim.webp",
             name: "FORMAL SHIRT",
             value: "formal_shirt"
@@ -47,12 +52,8 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
             name: "HALF COAT",
             value: "half_coat"
         },
-        {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661098/Blazer_mckp_bg_edit_pvykdi.webp",
-            name: "PLATINUM BLAZER",
-            value: "platinum_blazer"
-        },
     ];
+    
     
 
     return (

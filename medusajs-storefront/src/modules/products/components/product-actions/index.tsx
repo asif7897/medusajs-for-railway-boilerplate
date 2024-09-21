@@ -170,7 +170,7 @@ export default function ProductActions({
           <div className="py-[20px] pt-[10px] border-b-[1px] border-solid border-gray-200">
             <button onClick={() => {
               setIsOpen(true)
-            }} className="bg-[transparent] text-[13px] text-[#000] border-b-[1px] border-solid border-[#000] poppins font-bold text-lg text-blue-500" >Show Chart</button>
+            }} className="bg-[transparent] text-[13px] text-[#000] border-b-[1px] border-solid border-[#000] poppins font-bold text-lg text-blue-500" >SIZE CHART</button>
           </div>
 
           : ""}
