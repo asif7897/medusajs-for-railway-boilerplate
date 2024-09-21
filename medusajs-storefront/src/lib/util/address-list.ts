@@ -60,7 +60,7 @@ export const Address = [
                 floor: null,
                 mobile: "+8801896-060270",
                 time: "11AM - 8PM (Wed-Mon)",
-                shopUrl: "https://maps.app.goo.gl/u7UJqZ16sqqtmyhm8"
+                shopUrl: "https://maps.app.goo.gl/HXBF5JWjQkv9d1yA7"
             }
         ]
     },
