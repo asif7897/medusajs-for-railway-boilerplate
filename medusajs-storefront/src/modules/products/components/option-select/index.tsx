@@ -29,11 +29,11 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
               onClick={() => updateOption({ [option.id]: v })}
               key={v}
               className={clx(
-                "border-ui-border-base bg-ui-bg-subtle border text-small-regular h-10 rounded-rounded p-2 flex-1 ",
+                "border text-small-regular h-10 rounded-lg p-2 flex-1 transition-shadow ease-in-out duration-150", // Base button styles
                 {
-                  "border-ui-border-interactive": v === current,
-                  "hover:shadow-elevation-card-rest transition-shadow ease-in-out duration-150":
-                    v !== current,
+                  "border-gray-400 bg-gray-200 text-gray-800": v !== current, // Default state
+                  "border-blue-500 bg-blue-200 text-blue-800": v === current, // Active state
+                  "hover:bg-gray-300 hover:shadow-lg": v !== current, // Hover effect for non-active buttons
                 }
               )}
             >
