@@ -159,13 +159,14 @@ export default async function Home({
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp"
+              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp"
+
 
               alt="Box Tie"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp"
+              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp"
               alt="Box Tie Hover"
             />
             <svg
