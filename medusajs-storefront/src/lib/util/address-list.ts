@@ -50,7 +50,7 @@ export const Address = [
                 building_number: "A/36",
                 floor: null,
                 mobile: "+8801834939993",
-                time: "11AM - 8PM (Wed-Mon)",
+                time: "11AM - 8PM (Sat-Thursday)",
                 shopUrl: "https://maps.app.goo.gl/mzM9e3Vd1rvqC8QYA"
             },
             {
@@ -59,7 +59,7 @@ export const Address = [
                 building_number: "52/4/A",
                 floor: null,
                 mobile: "+8801896-060270",
-                time: "11AM - 8PM (Wed-Mon)",
+                time: "11AM - 8PM (Sat-Thursday)",
                 shopUrl: "https://maps.app.goo.gl/HXBF5JWjQkv9d1yA7"
             }
         ]
@@ -73,7 +73,7 @@ export const Address = [
                 building_number: "1083",
                 floor: null,
                 mobile: "+8801601219918",
-                time: "11AM - 8PM (Wed-Mon)",
+                time: "11AM - 8PM (Sat-Thursday)",
                 shopUrl: "https://www.google.com/maps/place/M.+Saifur+Rahman+Road,+Maulvi+Bazar/@24.4902398,91.7655662,17z/data=!3m1!4b1!4m6!3m5!1s0x375174bdff220731:0x8c2e2eef422b3362!8m2!3d24.4902349!4d91.7681411!16s%2Fg%2F1wd3tdj6?hl=es&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
             }
         ]
@@ -101,7 +101,7 @@ export const Address = [
                 building_number: null,
                 floor: null,
                 mobile: "+8801825947575",
-                time: "11AM - 8PM (Wed-Mon)",
+                time: "11AM - 8PM (Sat-Thursday)",
                 shopUrl: "https://maps.app.goo.gl/4SVz2EBrWCm2acE18"
             }
         ]
@@ -115,7 +115,7 @@ export const Address = [
                 building_number: "B-11",
                 floor: null,
                 mobile: "+8801824189230",
-                time: "11AM - 8PM (Wed-Mon)",
+                time: "11AM - 8PM (Sat-Thursday)",
                 shopUrl: "https://maps.app.goo.gl/jvcricm2baBAqQZu5"
             }
         ]
