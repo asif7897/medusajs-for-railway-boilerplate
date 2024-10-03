@@ -13,71 +13,33 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ collections, region
   const backgroundImageSrc = 'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1722540421/women_2_bkiqbm.webp';
 
   return (
-    <Link href="/collections/women's_suit">
-      <div
-        className="featured-products-wrapper"
-        style={{
-          backgroundImage: `url(${backgroundImageSrc})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "100vw",
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "20px",
-          cursor: "pointer",
-          position: "relative",
-        }}
-      >
-        <button
-          style={{
-            position: "absolute",
-            bottom: "2rem", // Position at the bottom
-            right: "2rem", // Position to the right
-            zIndex: 50,
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "250px", // Button width
-            height: "60px", // Button height
-            fontSize: "1rem",
-            fontWeight: "600",
-            color: "#004d00", // Green text initially
-            backgroundColor: "transparent", // Transparent background before hover
-            borderRadius: "0.375rem", // Rounded corners
-            border: "2px solid white", // White rectangle border
-            cursor: "pointer",
-            outline: "none",
-            transition: "background-color 0.3s ease, color 0.3s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "#004d00"; // Green background on hover
-            e.currentTarget.style.color = "white"; // White text on hover
-            e.currentTarget.style.borderColor = "#004d00"; // Remove white border on hover
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "transparent"; // Original background color
-            e.currentTarget.style.color = "white"; // Green text
-            e.currentTarget.style.borderColor = "white"; // White border
-          }}
-          onFocus={(e) => (e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0, 77, 0, 0.5)")} // Focus ring
-          onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
-        >
-          <span
-            style={{
-              padding: "0.5rem 1rem",
-              display: "block",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            Shop Now
-          </span>
-        </button>
+    <div
+      className="featured-products-wrapper relative overflow-hidden rounded-lg"
+      style={{
+        backgroundImage: `url(${backgroundImageSrc})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        minHeight: "400px", // Minimum height to ensure it's visible on mobile
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 h-full w-full flex items-center justify-end"> {/* Change justify-center to justify-end */}
+        <div className="text-white pr-4 md:pr-8"> {/* Removed text-center, added padding right */}
+          <h4 className="mb-6 text-xl font-semibold">Discover Premium Suits</h4>
+
+          <Link href="/collections/women's_suit">
+            <button
+              className="rounded border-2 border-neutral-50 px-7 py-3 text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:outline-none"
+            >
+              Shop Now
+            </button>
+          </Link>
+        </div>
       </div>
-    </Link>
+    </div>
   );
-}
+};
 
 export default FeaturedProducts;

@@ -1,40 +1,21 @@
-/* Wrapper for the featured products section */
+/* featured-products-wrapper styles */
 .featured-products-wrapper {
     width: 100vw;
-    height: 100vh;
-    display: flex; /* Flexbox for aligning content */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    overflow: hidden; /* Ensures no scrollbars appear */
-    cursor: pointer; /* Sets pointer cursor on hover */
-    position: relative; /* Ensures child positioning is relative to this wrapper */
-    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+    height: 100vh; /* Full height for desktop */
+    background-position: center;
+    background-size: cover; /* Keep cover for desktop */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.featured-products-wrapper:hover {
-    transform: scale(1.05); /* Zoom-in effect on hover */
-}
-
-/* Overlay for text */
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-/* Styling for the text */
-.featured-products-text {
-    font-size: 2rem; /* Large text size */
-    font-weight: bold; /* Makes the text bold */
-}
-
-/* Responsive styles for mobile devices */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
-    .featured-products-text {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    .featured-products-wrapper {
+        height: auto; /* Let height adjust dynamically */
+        background-size: contain; /* Show the full image */
+        background-position: top; /* Align the image from the top */
     }
 }
