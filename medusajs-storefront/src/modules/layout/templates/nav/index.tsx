@@ -77,7 +77,7 @@ export default async function Nav() {
     data-testid="nav-store-link"
   >
     <img
-      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723844942/png_icon_nbifsc.png"
+      src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728120237/sea_sky/ex9kb3ea0htacqrnupgv.webp"
       alt="sea sky"
       className="h-4 sm:h-5 md:h-6 lg:h-8 transition-transform duration-300"
     />
