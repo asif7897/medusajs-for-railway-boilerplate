@@ -47,14 +47,18 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   const images: string[] = widthIs < 650
     ? [
-        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/3.3_bfptbt.webp",      
-        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1.1_gaytzo.webp",
-        "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/2.2_c4cttl.webp",
+        
+        
+        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/ngfkqxklvhnqok4mwawb.webp",
+        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119253/sea_sky/m5adhp0srkcr3mgnxxy4.webp",
+        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/bv1aqybtj77gvygjkxrg.webp", 
+
       ]
     : [
-        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/3_uqfulu.webp',
-        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759877/1_mbtjqq.webp',
-        'https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723759878/2_tzhqd0.webp',
+     
+      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/ngfkqxklvhnqok4mwawb.webp",
+      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119253/sea_sky/m5adhp0srkcr3mgnxxy4.webp",
+      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/bv1aqybtj77gvygjkxrg.webp", 
       ];
 
   useEffect(() => {
