@@ -120,16 +120,16 @@ export default async function Home({
           <a
             href="/collections/luxury_belt"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
-            style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661119/belt_web_banner_oc3xke.webp")' }}
+            style={{ backgroundImage: 'url("https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124062/5/hruaz5yntqqjvbh6htax.webp")' }}
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661119/belt_web_banner_oc3xke.webp"
+              src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124062/5/hruaz5yntqqjvbh6htax.webp"
               alt="Luxury Belt"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1723909870/eghjh_1723909870068.png"
+              src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124015/5/vdinjllxdb8cep5592cf.webp"
               alt="Luxury Belt Hover"
             />
             <svg
@@ -155,18 +155,19 @@ export default async function Home({
           <a
             href="/collections/box_tie"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
-            style={{ backgroundImage: 'url("https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp")' }}
+            style={{ backgroundImage: 'url("https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124081/5/nutnwpvmlrcdjrlebx6c.webp")' }}
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661434/Tie_web_banner_2_bfz3mq.webp"
+              
+              src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124081/5/nutnwpvmlrcdjrlebx6c.webp"
 
 
               alt="Box Tie"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1724359771/tie_section_mgdjoo.webp"
+              src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124015/5/qb85e77hv2hmum9jnnuh.webp"
               alt="Box Tie Hover"
             />
             <svg
@@ -197,7 +198,7 @@ export default async function Home({
   <div className="relative flex items-center justify-center w-full h-[50vh] md:h-[70vh] bg-gray-200 rounded-lg overflow-hidden">
     <img
       className="absolute inset-0 w-full h-full object-cover"
-      src="https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661059/Gift_card_web_banner_o178kb.webp"
+      src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728124018/5/gaamxh2akkicngms2h8d.webp"
       alt="Gift Card"
     />
     <div className="relative z-10 flex flex-col items-end justify-center w-full h-full bg-opacity-10 text-white p-4 md:p-6">
