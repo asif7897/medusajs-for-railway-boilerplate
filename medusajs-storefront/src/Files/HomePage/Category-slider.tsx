@@ -28,27 +28,27 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
 
     const slides: Slide[] = [
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725662909/20240604_121624_1724569589034_hjeafp.webp",
+            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728121344/section%20two/ms0t0dlfjyxcz5qwz29y.webp",
             name: "PREMIUM SUIT",
             value: "premium_suit"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661098/Blazer_mckp_bg_edit_pvykdi.webp",
+            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728121347/section%20two/wcyjnwb4p2g05lltuhx6.webp",
             name: "PLATINUM BLAZER",
             value: "platinum_blazer"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661092/Shirt_bg_edit_ykxuim.webp",
+            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728121357/section%20two/hcoidrhwmyes0emwipij.webp",
             name: "FORMAL SHIRT",
             value: "formal_shirt"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725661097/Black_pant_nmh6os.webp",
+            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728121348/section%20two/y26mdpeecmvrhwvewram.webp",
             name: "FORMAL PANT",
             value: "formal_pant"
         },
         {
-            image: "https://res.cloudinary.com/dqgrlf8uf/image/upload/v1725663151/1_1_vidbgp.webp",
+            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728121332/section%20two/k33qom42spb7okpxkgsk.webp",
             name: "HALF COAT",
             value: "half_coat"
         },
