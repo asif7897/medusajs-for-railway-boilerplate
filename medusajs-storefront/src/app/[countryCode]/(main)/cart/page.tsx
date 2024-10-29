@@ -1,11 +1,12 @@
-import { LineItem } from "@medusajs/medusa";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
+import { LineItem } from "@medusajs/medusa";
 import CartTemplate from "@modules/cart/templates";
 import { enrichLineItems } from "@modules/cart/actions";
 import { getCheckoutStep } from "@lib/util/get-checkout-step";
 import { CartWithCheckoutStep } from "types/global";
 import { getCart, getCustomer } from "@lib/data";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Cart",
