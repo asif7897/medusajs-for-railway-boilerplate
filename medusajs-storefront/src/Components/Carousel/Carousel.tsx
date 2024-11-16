@@ -48,17 +48,29 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
   const images: string[] = widthIs < 650
     ? [
         
-        
-        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/ngfkqxklvhnqok4mwawb.webp",
-        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119253/sea_sky/m5adhp0srkcr3mgnxxy4.webp",
-        "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/bv1aqybtj77gvygjkxrg.webp", 
+      
+     
+     
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789314/tie_mobile_zb5mva.png",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789770/for_mobile_nonk1a.png",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789183/IMG_1240.jpg_mobile_zzdesy.jpg",
+     
+      
+       
 
       ]
     : [
+
      
-      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/ngfkqxklvhnqok4mwawb.webp",
-      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119253/sea_sky/m5adhp0srkcr3mgnxxy4.webp",
-      "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728119255/sea_sky/bv1aqybtj77gvygjkxrg.webp", 
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789198/tie_pc_tbfzc4.png", 
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789769/_SDP9211-Recovered-Recovered_iti6r8.png",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789186/banner_panjabi_uat6u0.jpg",
+      
+     
+    
+    
+
+
       ];
 
   useEffect(() => {
