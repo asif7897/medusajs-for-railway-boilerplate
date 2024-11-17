@@ -11,7 +11,7 @@ const ContactButtons = () => {
             id: 0,
             name: "Mobile",
             text: "09666-720023",
-            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728125715/sea_sky/kxylwbsf6ocdyqgs5hg3.svg",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797717/phone-6013_l3zlez.svg",
             link: "#"
 
         },
@@ -19,7 +19,7 @@ const ContactButtons = () => {
             id: 1,
             name: "Store Locator",
             text: "Find Our Store",
-            image: "https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728125619/sea_sky/snyvt90zzyuev9prv1ru.svg",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797586/pin-location-4355_dkjhgn.svg",
             link: "/shop-address"
         }
     ]
