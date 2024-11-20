@@ -28,27 +28,27 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
 
     const slides: Slide[] = [
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731795656/IMG_7013_yquojq.png",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103867/1_upp5wt.webp",
             name: "PREMIUM SUIT",
             value: "premium_suit"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731795043/Blazer_mckp_bg_edit_zblkg4.jpg",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/2_tgc9dd.webp",
             name: "PLATINUM BLAZER",
             value: "platinum_blazer"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731795041/Shirt_bg_edit_dcl7ep.jpg",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/3_pm63rk.webp",
             name: "FORMAL SHIRT",
             value: "formal_shirt"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731795048/Black_pant_dcokn8.jpg",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103931/4_diugva.webp",
             name: "FORMAL PANT",
             value: "formal_pant"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731795029/1_ccrtcy.png",
+            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103866/5_yt01ic.webp",
             name: "HALF COAT",
             value: "half_coat"
         },

@@ -51,9 +51,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       
      
      
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789314/tie_mobile_zb5mva.png",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789770/for_mobile_nonk1a.png",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789183/IMG_1240.jpg_mobile_zzdesy.jpg",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/tie_mobile_zb5mva_oy66id.webp",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102233/for_mobile_nonk1a_kuhlnq.webp",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/IMG_1240.jpg_mobile_zzdesy_ob1aee.webp",
      
       
        
@@ -62,9 +62,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     : [
 
      
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789198/tie_pc_tbfzc4.png", 
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789769/_SDP9211-Recovered-Recovered_iti6r8.png",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731789186/banner_panjabi_uat6u0.jpg",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/tie_pc_tbfzc4_ft6ajh.webp", 
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102233/_SDP9211-Recovered-Recovered_iti6r8_gvxk2g.webp",
+      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102223/banner_panjabi_uat6u0_mtwlzc.webp",
       
      
     

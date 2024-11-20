@@ -76,12 +76,24 @@ export default async function Nav() {
     className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
     data-testid="nav-store-link"
   >
-    <img
-      src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728120237/sea_sky/ex9kb3ea0htacqrnupgv.webp"
+  {/**  <img
+    logo png   src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728120237/sea_sky/ex9kb3ea0htacqrnupgv.webp"
       alt="sea sky"
       className="h-4 sm:h-5 md:h-6 lg:h-8 transition-transform duration-300"
-    />
+    />      */} 
+
+<h1
+      className="text-center tracking-[0.5em]"
+      style={{ letterSpacing: "0.5em" }}
+    >
+      SEA&nbsp;SKY
+    </h1>
+
+
+    
   </LocalizedClientLink>
+
+
 </div>
 
 
