@@ -8,12 +8,12 @@ import SideMenu from "@modules/layout/components/side-menu";
 import MegaMenu from "Components/MegaMenu/MegaMenu";
 
 const imageUrls = {
-  st1366: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731502077/black_ri1u8p.png',
-  nf2535: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731502073/sky_blue_1_nk8pww.png',
-  women1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731501380/sea_sky_nov/women/euyyizmclqte6syqmnwy.png',
-  women2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731501378/sea_sky_nov/women/wlnbabwrzp9nzsgbapd3.png',
-  acce1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731501384/sea_sky_nov/accessories/frasaznpuoyyqhwdqpul.jpg',
-  acce2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1731502440/seasky_tie_5_3st5_bg_sjx1iq.jpg'
+  st1366: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108081/black_ri1u8p_rdl8wo.webp',
+  nf2535: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108080/sky_blue_1_nk8pww_mtc8cp.webp',
+  women1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108080/wlnbabwrzp9nzsgbapd3_yzi1c4.webp',
+  women2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108079/euyyizmclqte6syqmnwy_xbm8mf.webp',
+  acce1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/c_thumb,w_200,g_face/v1732108081/un6hk4t0x2nl4hv0ann5_hgg1qe.webp',
+  acce2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108083/frasaznpuoyyqhwdqpul_x9vt0m.webp'
 };
 
 export default async function Nav() {
@@ -90,7 +90,7 @@ export default async function Nav() {
     </h1>
 
 
-    
+
   </LocalizedClientLink>
 
 
