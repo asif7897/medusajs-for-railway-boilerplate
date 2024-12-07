@@ -119,5 +119,23 @@ export const Address = [
                 shopUrl: "https://maps.app.goo.gl/jvcricm2baBAqQZu5"
             }
         ]
+    },
+    {
+        city: "Chittagong",
+        locations: [
+            {
+                address: "Chittagong shopping complex,2no Gate, Shop: G/D81",
+                building_name: null,
+                building_number: "B-11",
+                floor: null,
+                mobile: "+01896060280",
+                time: "11AM - 8PM (Sat-Thursday)",
+                shopUrl: "https://g.co/kgs/tqmZzC5"
+                 
+            }
+        ]
+
     }
+
+    
 ];
