@@ -49,6 +49,10 @@ const nextConfig = withStoreConfig({
         protocol: 'https',
         hostname: 'medusajs-frontend-production-28be.up.railway.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'seasky2004.s3.ap-south-1.amazonaws.com', // Add this line
+      },
     ],
   },
 })
