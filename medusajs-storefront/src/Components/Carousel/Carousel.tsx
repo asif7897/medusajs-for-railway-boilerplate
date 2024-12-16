@@ -51,9 +51,11 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       
      
      
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/tie_mobile_zb5mva_oy66id.webp",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102233/for_mobile_nonk1a_kuhlnq.webp",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/IMG_1240.jpg_mobile_zzdesy_ob1aee.webp",
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_mobile_zb5mva_oy66id.webp",
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/for_mobile_nonk1a_kuhlnq.webp",
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/IMG_1240.jpg_mobile_zzdesy_ob1aee.webp",
+      
+     
      
       
        
@@ -62,9 +64,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     : [
 
      
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102222/tie_pc_tbfzc4_ft6ajh.webp", 
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102233/_SDP9211-Recovered-Recovered_iti6r8_gvxk2g.webp",
-      "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732102223/banner_panjabi_uat6u0_mtwlzc.webp",
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp", 
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/_SDP9211-Recovered-Recovered_iti6r8_gvxk2g.webp",
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp"
       
      
     
