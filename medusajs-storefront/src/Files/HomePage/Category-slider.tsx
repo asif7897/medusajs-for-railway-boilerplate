@@ -28,27 +28,27 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
 
     const slides: Slide[] = [
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103867/1_upp5wt.webp",
+            image: "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/carousel_image/1.webp",
             name: "PREMIUM SUIT",
             value: "premium_suit"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/2_tgc9dd.webp",
+            image: "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/carousel_image/2.webp",
             name: "PLATINUM BLAZER",
             value: "platinum_blazer"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/3_pm63rk.webp",
+            image: "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/carousel_image/3.webp",
             name: "FORMAL SHIRT",
             value: "formal_shirt"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103931/4_diugva.webp",
+            image: "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/carousel_image/4.webp",
             name: "FORMAL PANT",
             value: "formal_pant"
         },
         {
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103866/5_yt01ic.webp",
+            image: "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/carousel_image/5.webp",
             name: "HALF COAT",
             value: "half_coat"
         },

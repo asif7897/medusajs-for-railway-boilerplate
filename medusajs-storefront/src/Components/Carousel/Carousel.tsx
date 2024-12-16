@@ -66,7 +66,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
      
       "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp", 
       "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/_SDP9211-Recovered-Recovered_iti6r8_gvxk2g.webp",
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp"
+      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/banner_panjabi_uat6u0_mtwlzc.webp"
       
      
     
