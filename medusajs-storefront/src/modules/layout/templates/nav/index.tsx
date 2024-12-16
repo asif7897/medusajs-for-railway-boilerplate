@@ -8,12 +8,12 @@ import SideMenu from "@modules/layout/components/side-menu";
 import MegaMenu from "Components/MegaMenu/MegaMenu";
 
 const imageUrls = {
-  st1366: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108081/black_ri1u8p_rdl8wo.webp',
-  nf2535: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108080/sky_blue_1_nk8pww_mtc8cp.webp',
-  women1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108080/wlnbabwrzp9nzsgbapd3_yzi1c4.webp',
-  women2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108079/euyyizmclqte6syqmnwy_xbm8mf.webp',
-  acce1: 'https://res.cloudinary.com/dvzdodv1r/image/upload/c_thumb,w_200,g_face/v1732108081/un6hk4t0x2nl4hv0ann5_hgg1qe.webp',
-  acce2: 'https://res.cloudinary.com/dvzdodv1r/image/upload/v1732108083/frasaznpuoyyqhwdqpul_x9vt0m.webp'
+  st1366: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/suit_1.webp',
+  nf2535: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/suit_2.webp',
+  women1: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/female_suit_1.webp',
+  women2: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/female_suit_2.webp',
+  acce1: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/acces_1.webp',
+  acce2: 'https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/navbar/acces_2.webp'
 };
 
 export default async function Nav() {
