@@ -11,7 +11,7 @@ const ContactButtons = () => {
             id: 0,
             name: "Mobile",
             text: "09666-720023",
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797717/phone-6013_l3zlez.svg",
+           // image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797717/phone-6013_l3zlez.svg",
             link: "#"
 
         },
@@ -19,7 +19,7 @@ const ContactButtons = () => {
             id: 1,
             name: "Store Locator",
             text: "Find Our Store",
-            image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797586/pin-location-4355_dkjhgn.svg",
+          //  image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1731797586/pin-location-4355_dkjhgn.svg",
             link: "/shop-address"
         }
     ]
@@ -34,7 +34,7 @@ const ContactButtons = () => {
                                 navigate.push(item.link)
                             }} key={index} className="w-[270px] address_box cursor-pointer flex gap-x-[13px] h-[70px] rounded-[10px] items-center border border-[#adadad] border-solid py-[10px] px-[30px] pr-[40px]">
                                 <div className="">
-                                    <img className="h-[25px]" src={item.image} />
+                                {/* <img className="h-[25px]" src={item.image} /> */}
                                 </div>
                                 <div className="w-[1px] bg-[#fff] h-[40px]" />
                                 <div className="pl-[7px] flex flex-col">
