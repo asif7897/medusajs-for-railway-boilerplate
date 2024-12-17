@@ -206,9 +206,9 @@ export default async function Home({
 
 
 
-
-
-
+        <div>
+        <Hero/>
+        </div>
 
 
 
