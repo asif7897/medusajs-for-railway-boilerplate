@@ -47,7 +47,7 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
       {/* Typography */}
       <div className={styles.typography}>
-        <h1 className={styles.subtitle}>Ready-Made Suit Types</h1>
+        <h1 className={styles.subtitle}>Ready-Made Suit</h1>
         <p className={styles.title}>Sea Sky</p>
       </div>
 
