@@ -129,7 +129,7 @@ export default async function Home({
 
         <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-start h-[80vh] md:h-[70vh]">
           <a
-            href="/collections/luxury_belt"
+            href="/collections/premium_suit"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
             style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/mens")' }}
           >
@@ -164,7 +164,7 @@ export default async function Home({
           </a>
 
           <a
-            href="/collections/premium_suit"
+            href="/collections/women's_suit"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
             style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/womens")' }}
           >
