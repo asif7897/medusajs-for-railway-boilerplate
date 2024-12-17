@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f3f3;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.container.desktop {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image-section {
+  flex: 3;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  border-radius: 8px;
+  transition: background-image 1s ease-in-out;
+}
+
+.content-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.content-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.shop-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .content-title {
+    font-size: 28px;
+  }
+
+  .content-description {
+    font-size: 18px;
+  }
+
+  .shop-button {
+    width: auto;
+  }
+}

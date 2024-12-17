@@ -8,6 +8,7 @@ import { ProductCollectionWithPreviews } from "types/global";
 import { cache } from "react";
 import Carousel from "Components/Carousel/Carousel";
 import CategorySlick from "Files/HomePage/Category-slider";
+import Animation from "@modules/layout/templates/animation";
 
 export const metadata: Metadata = {
   title: "Sea Sky",
@@ -111,7 +112,12 @@ export default async function Home({
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
-      </div> */}
+      </div>  */}
+
+
+    
+
+    
 
 
 
@@ -204,14 +210,16 @@ export default async function Home({
       </section>
 
 
-
+      <div>       <Animation/>     </div>
 
         <div>
         <Hero/>
         </div>
 
+       
 
-
+       
+       
 
 
 
@@ -219,8 +227,7 @@ export default async function Home({
 
 
       <section className="py-12 px-4 md:px-8">
-  <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-4 text-gray-700">GIFT CARD</h2>
-  <div className="relative flex items-center justify-center w-full h-[50vh] md:h-[70vh] bg-gray-200 rounded-lg overflow-hidden">
+   <div className="relative flex items-center justify-center w-full h-[50vh] md:h-[70vh] bg-gray-200 rounded-lg overflow-hidden">
     <img
       className="absolute inset-0 w-full h-full object-cover"
       src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Gift_card_web_banner_jyzvs5.webp"
