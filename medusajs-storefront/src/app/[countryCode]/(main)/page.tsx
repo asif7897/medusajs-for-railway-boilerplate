@@ -100,36 +100,47 @@ export default async function Home({
   return (
     <>
       <Carousel auto interval={5000} />
-      <div className="w-full">
+      {/* <div className="w-full">
         <div className="px-[10px]">
           <CategorySlick slides={slides} />
         </div>
-      </div>
-      <div className="py-12">
+      </div> */}
+
+
+      {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
-      </div>
+      </div> */}
+
+
+
+
+
+
+
+
+
+
+
 
       <section className="pb-4 pt-6 space-y-1 px-4 md:px-8">
-        <h2 className="w-full text-center text-2xl lg:text-3xl font-semibold mb-4">
-          ACCESSORIES
-        </h2>
+        
 
         <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-start h-[80vh] md:h-[70vh]">
           <a
             href="/collections/luxury_belt"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
-            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/belt_web_banner_edited_rtskon_ysp27a.webp")' }}
+            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/mens")' }}
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/belt_web_banner_edited_rtskon_ysp27a.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/mens"
               alt="Luxury Belt"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/belt_web_banner_edited_rtskon_ysp27a.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/mens"
               alt="Luxury Belt Hover"
             />
             <svg
@@ -148,26 +159,26 @@ export default async function Home({
               />
             </svg>
             <button className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-gray-300 text-4xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Shop Now
+               SHOP NOW
             </button>
           </a>
 
           <a
-            href="/collections/box_tie"
+            href="/collections/premium_suit"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
-            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Tie_web_banner_2_1_q1huo5.webp")' }}
+            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/womens")' }}
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
               
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Tie_web_banner_2_1_q1huo5.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/womens"
 
 
               alt="Box Tie"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Tie_web_banner_2_1_q1huo5.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/v2/banner/womens"
               alt="Box Tie Hover"
             />
             <svg
@@ -186,11 +197,25 @@ export default async function Home({
               />
             </svg>
             <button className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-gray-300 text-4xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Shop Now
+               SHOP NOW
             </button>
           </a>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <section className="py-12 px-4 md:px-8">
