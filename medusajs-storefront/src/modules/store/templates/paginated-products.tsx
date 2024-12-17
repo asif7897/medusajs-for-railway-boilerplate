@@ -1,16 +1,16 @@
-import { getProductsListWithSort, getRegion } from "@lib/data"
-import ProductPreview from "@modules/products/components/product-preview"
-import { Pagination } from "@modules/store/components/pagination"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { getProductsListWithSort, getRegion } from "@lib/data";
+import ProductPreview from "@modules/products/components/product-preview";
+import { Pagination } from "@modules/store/components/pagination";
+import { SortOptions } from "@modules/store/components/refinement-list/sort-products";
 
-const PRODUCT_LIMIT = 12
+const PRODUCT_LIMIT = 12;
 
 type PaginatedProductsParams = {
-  limit: number
-  collection_id?: string[]
-  category_id?: string[]
-  id?: string[]
-}
+  limit: number;
+  collection_id?: string[];
+  category_id?: string[];
+  id?: string[];
+};
 
 export default async function PaginatedProducts({
   sortBy,
@@ -20,33 +20,33 @@ export default async function PaginatedProducts({
   productsIds,
   countryCode,
 }: {
-  sortBy?: SortOptions
-  page: number
-  collectionId?: string
-  categoryId?: string
-  productsIds?: string[]
-  countryCode: string
+  sortBy?: SortOptions;
+  page: number;
+  collectionId?: string;
+  categoryId?: string;
+  productsIds?: string[];
+  countryCode: string;
 }) {
-  const region = await getRegion(countryCode)
+  const region = await getRegion(countryCode);
 
   if (!region) {
-    return null
+    return null;
   }
 
   const queryParams: PaginatedProductsParams = {
     limit: PRODUCT_LIMIT,
-  }
+  };
 
   if (collectionId) {
-    queryParams["collection_id"] = [collectionId]
+    queryParams["collection_id"] = [collectionId];
   }
 
   if (categoryId) {
-    queryParams["category_id"] = [categoryId]
+    queryParams["category_id"] = [categoryId];
   }
 
   if (productsIds) {
-    queryParams["id"] = productsIds
+    queryParams["id"] = productsIds;
   }
 
   const {
@@ -56,22 +56,30 @@ export default async function PaginatedProducts({
     queryParams,
     sortBy,
     countryCode,
-  })
+  });
 
-  const totalPages = Math.ceil(count / PRODUCT_LIMIT)
+  const totalPages = Math.ceil(count / PRODUCT_LIMIT);
 
   return (
-    <>
-      <ul className="grid grid-cols-2 w-full small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
-        {products.map((p) => {
-          return (
-            <li key={p.id}>
-              <ProductPreview productPreview={p} region={region} />
-            </li>
-          )
-        })}
+    <div className="p-6 bg-gray-100 min-h-screen">
+      {/* Product Grid */}
+      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-6">
+        {products.map((p) => (
+          <li
+            key={p.id}
+            className="p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <ProductPreview productPreview={p} region={region} />
+          </li>
+        ))}
       </ul>
-      {totalPages > 1 && <Pagination page={page} totalPages={totalPages} />}
-    </>
-  )
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-8 flex justify-center">
+          <Pagination page={page} totalPages={totalPages} />
+        </div>
+      )}
+    </div>
+  );
 }
