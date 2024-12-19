@@ -33,16 +33,20 @@ const Animation = () => {
     alignItems: "center",
     justifyContent: "space-between",
     gap: "20px",
+    padding: "20px",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+    borderRadius: "15px",
+    backgroundColor: "#f9f9f9",
   };
 
   const imageStyle: React.CSSProperties = {
-    width: isDesktop ? "60%" : "100%", // Increase the width for desktop
-    height: isDesktop ? "500px" : "350px", // Adjust height for better visibility
-    borderRadius: "10px",
-    objectFit: "contain", // Ensure the image is fully contained without cropping
-    maxWidth: "100%", // Prevent the image from overflowing
-    maxHeight: "500px", // Limit the height for desktop
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+    width: isDesktop ? "45%" : "100%", // Full width on mobile, 45% on desktop
+    height: isDesktop ? "500px" : "auto", // Maintain aspect ratio on mobile
+    borderRadius: "15px",
+    objectFit: "cover", // Make the image fill the container without distortion
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)", // Card effect for the image
+    maxWidth: "100%", // Prevent overflow
+    transition: "transform 0.3s ease",
   };
 
   const contentStyle: React.CSSProperties = {
@@ -61,8 +65,10 @@ const Animation = () => {
   };
 
   const headingStyle: React.CSSProperties = {
-    fontSize: isDesktop ? "40px" : "24px",
-    marginBottom: "10px",
+    fontSize: isDesktop ? "36px" : "28px",
+    marginBottom: "15px",
+    fontWeight: "bold",
+    color: "#333",
   };
 
   const bodyTextStyle: React.CSSProperties = {
@@ -79,7 +85,13 @@ const Animation = () => {
 
       {/* BELT Section */}
       <div style={sectionStyle}>
-        <img src={imageBelt} alt="Belt" style={imageStyle} />
+        <img
+          src={imageBelt}
+          alt="Belt"
+          style={imageStyle}
+          onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+          onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+        />
         <div style={contentStyle}>
           <div>
             <h2 style={headingStyle}>BELT</h2>
