@@ -1,6 +1,5 @@
 import { headers } from "next/headers";
 import { Suspense } from "react";
-
 import { listRegions } from "@lib/data";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import CartButton from "@modules/layout/components/cart-button";
@@ -18,7 +17,7 @@ const imageUrls = {
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions);
-  
+
   const Arr = [
     {
       "main_category": "Men",
@@ -26,7 +25,6 @@ export default async function Nav() {
         { "name": "Premium Suit", "handle": "premium_suit" },
         { "name": "Platinum Blazer", "handle": "platinum_blazer" },
         { "name": "Formal Shirt", "handle": "formal_shirt" },
-      //  { "name": "Elite Panjabi", "handle": "elite_panjabi" },
         { "name": "Half Coat", "handle": "half_coat" },
         { "name": "Formal Pant", "handle": "formal_pant" }
       ],
@@ -44,7 +42,6 @@ export default async function Nav() {
       "sub_categories": [
         { "name": "Luxury-belt", "handle": "luxury_belt" },
         { "name": "Box-tie", "handle": "box_tie" }
-       
       ],
       image: [imageUrls.acce1, imageUrls.acce2]
     }
@@ -62,45 +59,31 @@ export default async function Nav() {
               {/* Inner content */}
               <div className="flex items-center h-12 relative mx-4">
                 <div className="flex flex-col w-full">
-                  <div className="flex justify-between items-center w-full">  
+                  <div className="flex justify-between items-center w-full">
                     <div className="flex-1 basis-0 h-full flex items-center">
                       <div className="h-full">
                         <SideMenu regions={regions} />
                       </div>
                     </div>
 
+                    {/* Logo */}
+                    <div className="flex items-center h-full my-2 -mt-2">
+                      <LocalizedClientLink
+                        href="/"
+                        className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
+                        data-testid="nav-store-link"
+                      >
+                        <img
+                          src="https://res.cloudinary.com/dgczlumzt/image/upload/v1734564309/logo/geojlb5pe7frn4ffwjtw.png"
+                          alt="sea sky"
+                          className="h-16 sm:h-20 md:h-24 lg:h-28 max-h-[6rem] object-contain transition-transform duration-300"
+                        />
+                      </LocalizedClientLink>
+                    </div>
 
-                   <div className="flex items-center h-full my-2 -mt-2">
-  <LocalizedClientLink
-    href="/"
-    className="transition-transform transform hover:scale-105 hover:text-yellow-500 transition-all duration-300 flex items-center"
-    data-testid="nav-store-link"
-  >
-  {/**  <img
-    logo png   src="https://res.cloudinary.com/dgzmsjcxx/image/upload/v1728120237/sea_sky/ex9kb3ea0htacqrnupgv.webp"
-      alt="sea sky"
-      className="h-4 sm:h-5 md:h-6 lg:h-8 transition-transform duration-300"
-    />      */} 
-
-<h1
-      className="text-center tracking-[0.5em]"
-      style={{ letterSpacing: "0.5em" }}
-    >
-      SEA&nbsp;SKY
-    </h1>
-
-
-
-  </LocalizedClientLink>
-
-
-</div>
-
-
-
-
+                    {/* Right side (Menu, Account, Cart) */}
                     <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end mx-4">
-                      <div className="hidden small:flex items-center gap-x-6 h-full ">
+                      <div className="hidden small:flex items-center gap-x-6 h-full">
                         {process.env.FEATURE_SEARCH_ENABLED && (
                           <LocalizedClientLink
                             className="hover:text-yellow-500 transition-colors duration-300"
@@ -134,7 +117,8 @@ export default async function Nav() {
                 </div>
               </div>
             </div>
-            <div className="sm:flex hidden justify-center items-center bg-[#000] pt-[10px] pb-[10px] poppins">
+            {/* MegaMenu for large screens */}
+            <div className="sm:flex hidden justify-center items-center bg-[#000] pt-[10px] pb-[10px] poppins uppercase">
               <MegaMenu Arr={Arr} />
             </div>
           </div>
