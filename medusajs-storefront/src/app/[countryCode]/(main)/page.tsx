@@ -165,7 +165,7 @@ export default async function Home({
               />
             </svg>
             <button className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-gray-300 text-4xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            MEN'S WEAR
+            MENS WEAR
 
             </button>
           </a>
@@ -204,7 +204,7 @@ export default async function Home({
               />
             </svg>
             <button className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-gray-300 text-4xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            WOMEN'S WEAR
+            WOMENS WEAR
             </button>
           </a>
         </div>
