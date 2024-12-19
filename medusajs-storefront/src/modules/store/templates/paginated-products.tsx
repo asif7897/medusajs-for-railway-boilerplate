@@ -61,15 +61,17 @@ export default async function PaginatedProducts({
   const totalPages = Math.ceil(count / PRODUCT_LIMIT);
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="px-2 sm:px-4 lg:px-6 bg-gray-100 min-h-screen">
       {/* Product Grid */}
-      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-6">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
         {products.map((p) => (
           <li
             key={p.id}
-            className="p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            className="flex flex-col p-2 sm:p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
           >
-            <ProductPreview productPreview={p} region={region} />
+            <div className="flex-grow">
+              <ProductPreview productPreview={p} region={region} />
+            </div>
           </li>
         ))}
       </ul>
