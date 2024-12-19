@@ -35,12 +35,13 @@ const Animation = () => {
     gap: "20px",
   };
 
-  // Move the imageStyle inside the component where `isDesktop` is available
   const imageStyle: React.CSSProperties = {
     width: isDesktop ? "60%" : "100%", // Increase the width for desktop
-    height: isDesktop ? "500px" : "350px", // Increase height for larger images
+    height: isDesktop ? "500px" : "350px", // Adjust height for better visibility
     borderRadius: "10px",
-    objectFit: "cover",
+    objectFit: "contain", // Ensure the image is fully contained without cropping
+    maxWidth: "100%", // Prevent the image from overflowing
+    maxHeight: "500px", // Limit the height for desktop
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
   };
 
